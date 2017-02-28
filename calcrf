@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -8,4 +8,17 @@ parser.add_argument('files', type=str, nargs='+',
 
 args = parser.parse_args()
 
-print(args)
+
+SOME_SLOWNESS = 0.1
+SOME_AZIMUTH = 0
+
+
+from utils import theoretical_azimuth
+from obspy import read
+
+theoretical = (theoretical_azimuth(0.1))
+
+for datafile in vars(args)['files']:
+    data = read(datafile)
+    data.rotate('ZNE->LQT', SOME_AZIMUTH, theoretical)
+    data.plot()
