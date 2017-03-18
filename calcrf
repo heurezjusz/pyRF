@@ -1,5 +1,21 @@
 #!/usr/bin/python3
 
+DELTA = 5.000000e-02
+LENGTH = 3601
+SLOWNESS = 5.523560e+00 / 111.12
+DISTANCE = 7.841513e+01
+AZIMUTH = 4.339704e+01
+
+FREQMIN = 0.03
+FREQMAX = 0.8
+
+ARG1 = 195.0
+ARG2 = 300.0
+ARG3 = 0.1
+ARG4 = 1
+
+
+# parsing arguments
 import argparse
 parser = argparse.ArgumentParser()
 
@@ -9,16 +25,25 @@ parser.add_argument('files', type=str, nargs='+',
 args = parser.parse_args()
 
 
-SOME_SLOWNESS = 0.1
-SOME_AZIMUTH = 0
-
-
+# program itself
 from utils import theoretical_azimuth
 from obspy import read
 
-theoretical = (theoretical_azimuth(0.1))
+theoretical = (theoretical_azimuth(SLOWNESS, 1.3))
 
 for datafile in vars(args)['files']:
     data = read(datafile)
-    data.rotate('ZNE->LQT', SOME_AZIMUTH, theoretical)
+    data.rotate('ZNE->LQT', AZIMUTH, theoretical)
+    data.filter('bandpass', freqmin=FREQMIN, freqmax=FREQMAX)
+
+    # dec3 195, 300, 0.1, 1
+
+    if ARG4 == -1:
+        maxes = data.max()
+        for i in range(len(maxes)):
+            data.traces[i].data /= maxes[i]
+    
+    
+    print("???")
+    print(data.max())
     data.plot()
