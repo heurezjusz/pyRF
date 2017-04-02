@@ -1,19 +1,7 @@
 #!/usr/bin/python3
 
-DELTA = 5.000000e-02
-LENGTH = 3601
-SLOWNESS = 5.523560e+00 / 111.12
-DISTANCE = 7.841513e+01
-AZIMUTH = 4.339704e+01
 
-FREQMIN = 0.03
-FREQMAX = 0.8
-
-ARG1 = 195.0
-ARG2 = 300.0
-ARG3 = 0.1
-ARG4 = 1
-
+from config import *
 
 # parsing arguments
 import argparse
@@ -26,24 +14,49 @@ args = parser.parse_args()
 
 
 # program itself
-from utils import theoretical_azimuth
+from utils import theoretical_azimuth, deconvolve
 from obspy import read
+from obspy.core.utcdatetime import UTCDateTime
+from obspy.core.stream import Stream
+import numpy as np
 
 theoretical = (theoretical_azimuth(SLOWNESS, 1.3))
 
 for datafile in vars(args)['files']:
     data = read(datafile)
-    data.rotate('ZNE->LQT', AZIMUTH, theoretical)
-    data.filter('bandpass', freqmin=FREQMIN, freqmax=FREQMAX)
+    data = data.slice(UTCDateTime('2007-07-16T01:25:00'), UTCDateTime('2007-07-16T01:28:00'))
+    data.plot()
+    data = data.rotate('ZNE->LQT', AZIMUTH, theoretical)
+    data = data.filter('bandpass', freqmin=FREQMIN, freqmax=FREQMAX)
+    #data.plot()
+    #1 / 0
 
+    print(data)
+    
     # dec3 195, 300, 0.1, 1
 
-    if ARG4 == -1:
+    if ARG4 == -1 or True:
         maxes = data.max()
         for i in range(len(maxes)):
             data.traces[i].data /= maxes[i]
     
+    stL = data.select(component='L')
+    stQ = data.select(component='Q')
+    stT = data.select(component='T')
+
+    print("deconvolution...")
+    RFtraces = deconvolve([stQ.traces[0].data, stT.traces[0].data], stL.traces[0].data)
+
+    stQ.traces[0].data = RFtraces[0]
+    stT.traces[0].data = RFtraces[1]
+#    stQ.traces[0].data, _ = np.asarray(deconvolve(stQ.traces[0].data, stL.traces[0].data))
+#    stT.traces[0].data, _ = np.asarray(deconvolve(stT.traces[0].data, stL.traces[0].data))
+
+    print(stQ.traces[0].stats.channel)
+    print(stQ)
+    print(stQ.traces)
+    print(stQ.traces[0].data)
+
+    data = Stream(stQ.traces + stT.traces)
     
-    print("???")
-    print(data.max())
     data.plot()
