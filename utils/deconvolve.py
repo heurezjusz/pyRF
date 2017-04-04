@@ -24,9 +24,9 @@ def deconvolve(signals, function):
    # fun = spikefil(function)
    # return [s / fun for s in spikes]
 
-    fff = np.fft.fft(function)
-    ffs = [np.fft.fft(s) / fff for s in signals]
-    return [np.fft.ifft(fs) for fs in ffs]
+    fff = np.fft.rfft(function)
+    ffs = [np.fft.rfft(s) / fff for s in signals]
+    return [np.fft.irfft(fs) for fs in ffs]
 
 
 def levinson(toeplitz, signal):
