@@ -20,7 +20,7 @@ def deconvolve(signals, function):
    # print(toeplitz_inv)
     
     print("counting result...")
-    return [levinson(c, s) for s in signals]
+    return [spikefil(s) for s in signals]
 
 
 
@@ -64,3 +64,29 @@ def levinson(toeplitz, signal):
             a[j] = b[j]
 
     return f[:-1]
+
+
+
+from scipy.signal import wiener
+def spikefil(trc):
+    return wiener(trc)
+    trclth = len(trc)
+    t0 = 0 # some t0 on max
+    tmp = trc[0]
+    for i in range(1, trclth):
+        if abs(trc[i]) > tmp:
+            tmp, t0 = trc[i], i
+    ac = np.zeros(trclth)
+    ccr = np.zeros(trclth)
+    for d in range(0, trclth):
+        for i in range(d, trclth):
+            ac[d] += trc[i] * trc[i - d]
+
+    reg = 0
+    ac[0] *= 1. + reg
+
+    for i in range(0, t0+1):
+        ccr[i] += trc[t0-i]
+    for i in range(t0+1, trclth):
+        ccr[i] = 0
+    return levinson(ac, ccr)
