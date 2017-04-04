@@ -2,7 +2,7 @@
 ajawiemdlaczego/
 
 # datafiles
-*.mseed
+#*.mseed
 data/
 
 # Byte-compiled / optimized / DLL files
