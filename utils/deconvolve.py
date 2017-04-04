@@ -6,8 +6,8 @@ def deconvolve(signals, function):
     
     n = len(function)
     print("n=",n)
-    print("creating matrix")
-    c = np.asarray(function)
+   # print("creating matrix")
+   # c = np.asarray(function)
    # 
    # toeplitz = np.zeros((n,n))
    # for i in range(0, n):
@@ -19,9 +19,14 @@ def deconvolve(signals, function):
    # toeplitz_inv = np.linalg.inv(toeplitz)
    # print(toeplitz_inv)
     
-    print("counting result...")
-    return [spikefil(s) for s in signals]
+   # print("counting result...")
+   # spikes = [spikefil(s) for s in signals]
+   # fun = spikefil(function)
+   # return [s / fun for s in spikes]
 
+    fff = np.fft.fft(function)
+    ffs = [np.fft.fft(s) / fff for s in signals]
+    return [np.fft.ifft(fs) for fs in ffs]
 
 
 def levinson(toeplitz, signal):
