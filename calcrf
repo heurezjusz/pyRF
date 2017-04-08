@@ -35,7 +35,7 @@ for datafile in vars(args)['files']:
     
     # dec3 195, 300, 0.1, 1
 
-    if ARG4 == -1 or True:
+    if ARG4 == -1:
         maxes = data.max()
         for i in range(len(maxes)):
             data.traces[i].data /= maxes[i]

@@ -23,10 +23,16 @@ def deconvolve(signals, function):
    # spikes = [spikefil(s) for s in signals]
    # fun = spikefil(function)
    # return [s / fun for s in spikes]
+    
 
-    fff = np.fft.rfft(function)
-    ffs = [np.fft.rfft(s) / fff for s in signals]
-    return [np.fft.irfft(fs) for fs in ffs]
+    # fff = np.fft.rfft(function)
+    # ffs = [np.fft.rfft(s) / fff for s in signals]
+    # return [np.fft.irfft(fs) for fs in ffs]
+
+    print("counting filter")
+    filt = spikefil(function)
+    print("counting result")
+    return [np.convolve(s, filt, mode='same') for s in signals]
 
 
 def levinson(toeplitz, signal):
@@ -74,7 +80,7 @@ def levinson(toeplitz, signal):
 
 from scipy.signal import wiener
 def spikefil(trc):
-    return wiener(trc)
+    #return wiener(trc)
     trclth = len(trc)
     t0 = 0 # some t0 on max
     tmp = trc[0]
