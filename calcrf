@@ -58,4 +58,5 @@ for datafile in vars(args)['files']:
     data = Stream(stQ.traces + stT.traces)
     if config.SAVE_RF:
         data.write(output_filename(datafile, prefix='rf_'), config.SAVE_FORMAT)
-    data.plot()
+    if config.PLOT_RF:
+        data.plot()
