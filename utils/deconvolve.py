@@ -30,9 +30,9 @@ def deconvolve(signals, function):
     # return [np.fft.irfft(fs) for fs in ffs]
 
     print("counting filter")
-    filt = spikefil(function, type="end")
+    filt = spikefil(function, type="center")
     print("counting result")
-    return [np.convolve(s, filt, mode='same') for s in signals]
+    return [np.convolve(s, filt) for s in signals]
 
 
 def levinson(toeplitz, signal):
