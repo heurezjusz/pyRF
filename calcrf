@@ -25,10 +25,10 @@ theoretical = (theoretical_azimuth(SLOWNESS, 1.3))
 for datafile in vars(args)['files']:
     data = read(datafile)
     data = data.slice(UTCDateTime('2007-07-16T01:25:00'), UTCDateTime('2007-07-16T01:28:00'))
-    data.plot()
+    #data.plot()
     data = data.rotate('ZNE->LQT', AZIMUTH, theoretical)
     data = data.filter('bandpass', freqmin=FREQMIN, freqmax=FREQMAX)
-    #data.plot()
+    data.plot()
     #1 / 0
 
     print(data)

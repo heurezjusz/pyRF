@@ -30,7 +30,7 @@ def deconvolve(signals, function):
     # return [np.fft.irfft(fs) for fs in ffs]
 
     print("counting filter")
-    filt = spikefil(function)
+    filt = spikefil(function, type="end")
     print("counting result")
     return [np.convolve(s, filt, mode='same') for s in signals]
 
@@ -79,14 +79,31 @@ def levinson(toeplitz, signal):
 
 
 from scipy.signal import wiener
-def spikefil(trc):
+def spikefil(trc, type="max", spike_pos=None):
     #return wiener(trc)
     trclth = len(trc)
-    t0 = 0 # some t0 on max
-    tmp = trc[0]
-    for i in range(1, trclth):
-        if abs(trc[i]) > tmp:
-            tmp, t0 = trc[i], i
+    t0 = 0 # spike position
+
+    if type not in [ "max", "beginning", "end", "center", "given", "mass_center" ]:
+        raise NotImplementedError
+    if type == "max":
+        t0 = np.argmax(t0)
+    if type == "beginning":
+        t0 = 0
+    if type == "end":
+        t0 = trclth - 1
+    if type == "center":
+        t0 = trclth // 2
+    if type == "given":
+        if spike_pos is None:
+            raise RuntimeError("spikefil: in mode \'given\' spike_pos should be specified")
+        t0 = spike_pos
+    if type == "mass_center":
+        a = np.asarray(range(0, trclth))
+        t0 = int(np.sum(np.abs(trc*a)) / np.sum(np.abs(trc)))
+
+    print("t0=", t0)
+
     ac = np.zeros(trclth)
     ccr = np.zeros(trclth)
     for d in range(0, trclth):
