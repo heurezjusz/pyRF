@@ -3,7 +3,7 @@ ajawiemdlaczego/
 
 # datafiles
 data/
-out/
+out/*.mseed
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
