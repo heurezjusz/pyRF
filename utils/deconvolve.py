@@ -59,20 +59,17 @@ def levinson(toeplitz, signal):
         z1 = 0. if i == m else r[i + 1]
         z2 = g[i]
 
-        for j in range(2, i+1):
-            gn -= r[j] * a[j-1]
-            z1 -= r[j] * a[i-j+1]
-            z2 -= r[j] * f[i-j+1]
+        gn -= np.sum(r[2 : i + 1] * a[1 : i])
+        z1 -= np.sum(r[2 : i + 1] * a[1 : i][::-1])
+        z2 -= np.sum(r[2 : i + 1] * f[1 : i][::-1])
 
         a[i] = z1 / gn
         f[i] = z2 / gn
         
-        for j in range(1, i):
-            b[j] = a[j] - a[i] * a[i - j]
-            f[j] -= f[i] * a[i - j]
-        
-        for j in range(1, i):
-            a[j] = b[j]
+        b[1 : i] = a[1 : i] - a[i] * a[1 : i][::-1]
+        f[1 : i] -= f[i] * a[1 : i][::-1]
+                
+        a[ : i] = b[ : i]
 
     return f[:-1]
 
@@ -80,14 +77,13 @@ def levinson(toeplitz, signal):
 
 from scipy.signal import wiener
 def spikefil(trc, type="max", spike_pos=None):
-    #return wiener(trc)
     trclth = len(trc)
     t0 = 0 # spike position
 
     if type not in [ "max", "beginning", "end", "center", "given", "mass_center" ]:
         raise NotImplementedError
     if type == "max":
-        t0 = np.argmax(t0)
+        t0 = np.argmax(trc)
     if type == "beginning":
         t0 = 0
     if type == "end":
@@ -100,21 +96,19 @@ def spikefil(trc, type="max", spike_pos=None):
         t0 = spike_pos
     if type == "mass_center":
         a = np.asarray(range(0, trclth))
-        t0 = int(np.sum(np.abs(trc*a)) / np.sum(np.abs(trc)))
+        t0 = int(np.sum(np.abs(trc * a)) / np.sum(np.abs(trc)))
 
     print("t0=", t0)
 
     ac = np.zeros(trclth)
     ccr = np.zeros(trclth)
     for d in range(0, trclth):
-        for i in range(d, trclth):
-            ac[d] += trc[i] * trc[i - d]
+        ac[d] = np.sum(trc[d:] * trc[: trclth - d])
 
     reg = 0
     ac[0] *= 1. + reg
 
-    for i in range(0, t0+1):
-        ccr[i] += trc[t0-i]
-    for i in range(t0+1, trclth):
-        ccr[i] = 0
+    ccr[:t0 + 1] = trc[:t0 + 1][::-1]
+    
+    print("levinson...\n")
     return levinson(ac, ccr)

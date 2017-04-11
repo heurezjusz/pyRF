@@ -55,6 +55,9 @@ for datafile in vars(args)['files']:
     stQ.traces[0].data = RFtraces[0]
     stT.traces[0].data = RFtraces[1]
 
+    #stQ.write(output_filename(datafile, prefix='Qrf_'), config.SAVE_FORMAT)
+    #stT.write(output_filename(datafile, prefix='Trf_'), config.SAVE_FORMAT)
+
     data = Stream(stQ.traces + stT.traces)
     if config.SAVE_RF:
         data.write(output_filename(datafile, prefix='rf_'), config.SAVE_FORMAT)
