@@ -6,29 +6,6 @@ def deconvolve(signals, function):
     
     n = len(function)
     print("n=",n)
-   # print("creating matrix")
-   # c = np.asarray(function)
-   # 
-   # toeplitz = np.zeros((n,n))
-   # for i in range(0, n):
-   #     for j in range(0, n):
-   #         toeplitz[i][j] = function[(i - j + n) % n]
-   # print(toeplitz)
-
-   # print("inverting...")
-   # toeplitz_inv = np.linalg.inv(toeplitz)
-   # print(toeplitz_inv)
-    
-   # print("counting result...")
-   # spikes = [spikefil(s) for s in signals]
-   # fun = spikefil(function)
-   # return [s / fun for s in spikes]
-    
-
-    # fff = np.fft.rfft(function)
-    # ffs = [np.fft.rfft(s) / fff for s in signals]
-    # return [np.fft.irfft(fs) for fs in ffs]
-
     print("counting filter")
     filt = spikefil(function, type="center")
     print("counting result")
@@ -45,33 +22,33 @@ def levinson(toeplitz, signal):
     """
     # todo: input checking
     m = len(toeplitz)
-    r = np.insert(toeplitz, 0, 0)
-    g = np.insert(signal, 0, 0)
-    a = np.zeros(m + 1)
-    b = np.zeros(m + 1)
-    f = np.zeros(m + 1)
+    r = toeplitz
+    g = signal
+    a = np.zeros(m)
+    b = np.zeros(m)
+    f = np.zeros(m)
     
-    f[1] = g[1] / r[1]
-    a[1] = r[2] / r[1]
+    f[0] = g[0] / r[0]
+    a[0] = r[1] / r[0]
 
-    for i in range(2, m+1):
-        gn = r[1]
-        z1 = 0. if i == m else r[i + 1]
+    for i in range(1, m):
+        gn = r[0]
+        z1 = 0. if i == m - 1 else r[i + 1]
         z2 = g[i]
 
-        gn -= np.sum(r[2 : i + 1] * a[1 : i])
-        z1 -= np.sum(r[2 : i + 1] * a[1 : i][::-1])
-        z2 -= np.sum(r[2 : i + 1] * f[1 : i][::-1])
+        gn -= np.sum(r[1 : i + 1] * a[0 : i])
+        z1 -= np.sum(r[1 : i + 1] * a[0 : i][::-1])
+        z2 -= np.sum(r[1 : i + 1] * f[0 : i][::-1])
 
         a[i] = z1 / gn
         f[i] = z2 / gn
         
-        b[1 : i] = a[1 : i] - a[i] * a[1 : i][::-1]
-        f[1 : i] -= f[i] * a[1 : i][::-1]
+        b[0 : i] = a[0 : i] - a[i] * a[0 : i][::-1]
+        f[0 : i] -= f[i] * a[0 : i][::-1]
                 
         a[ : i] = b[ : i]
 
-    return f[:-1]
+    return f
 
 
 
