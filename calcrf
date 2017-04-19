@@ -26,11 +26,16 @@ import numpy as np
 for datafile in vars(args)['files']:
     # reading file
     data = read(datafile)
+    
     data = data.slice(UTCDateTime('2007-07-16T01:25:18'), UTCDateTime('2007-07-16T01:27:03'))
+
+    
     if config.PLOT_DATA_FROM_FILE: data.plot()
+    #print(data[0].stats.back_azimuth)
 
     # rotating
-    data = rotate(data)
+    data = rotate(data, mode='search')
+
     data = data.filter('bandpass', freqmin=config.FREQMIN, freqmax=config.FREQMAX)
     if config.SAVE_ROTATED:
         data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)

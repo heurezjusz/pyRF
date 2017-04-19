@@ -19,6 +19,9 @@ FREQMAX = 0.8
 REVERSE_QRF = True
 REVERSE_TRF = False
 
+
+FIRST_PEAK_POSITION = 148
+
 # ================== saving results ==================
 # format of data to be saved
 SAVE_FORMAT = "MSEED"
@@ -29,8 +32,8 @@ SAVE_RF = True
 
 # ================= plotting results =================
 # plots data from readed file
-PLOT_DATA_FROM_FILE = False
+PLOT_DATA_FROM_FILE = True
 # plots data after rotation
-PLOT_ROTATED = False
+PLOT_ROTATED = True
 # plots calculated receive function
 PLOT_RF = True
