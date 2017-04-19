@@ -14,13 +14,12 @@ args = parser.parse_args()
 
 
 # program itself
-from utils import theoretical_azimuth, deconvolve, output_filename
+from utils import deconvolve, output_filename, rotate
+
 from obspy import read
 from obspy.core.utcdatetime import UTCDateTime
 from obspy.core.stream import Stream
 import numpy as np
-
-theoretical = (theoretical_azimuth(config.SLOWNESS, 1.3))
 
 
 
@@ -31,7 +30,7 @@ for datafile in vars(args)['files']:
     if config.PLOT_DATA_FROM_FILE: data.plot()
 
     # rotating
-    data = data.rotate('ZNE->LQT', config.AZIMUTH, theoretical)
+    data = rotate(data)
     data = data.filter('bandpass', freqmin=config.FREQMIN, freqmax=config.FREQMAX)
     if config.SAVE_ROTATED:
         data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)
