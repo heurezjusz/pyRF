@@ -31,10 +31,9 @@ for datafile in vars(args)['files']:
 
     
     if config.PLOT_DATA_FROM_FILE: data.plot()
-    #print(data[0].stats.back_azimuth)
 
     # rotating
-    data = rotate(data, mode='search')
+    data = rotate(data, mode=config.ROTATION_MODE)
 
     data = data.filter('bandpass', freqmin=config.FREQMIN, freqmax=config.FREQMAX)
     if config.SAVE_ROTATED:

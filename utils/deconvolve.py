@@ -1,18 +1,22 @@
+import config
 import numpy as np
 
 def deconvolve(signals, function):
     """returns list of deconvolutions of given signals
     using Toeplitz matrix method"""
     
+    if config.verbosity >= 1:
+        print("deconvotution")
     n = len(function)
-    print("n=",n)
-    print("counting filter")
-    filt = spikefil(function, type="center")
-    print("counting result")
+    if config.verbosity >= 2:
+        print("deconvotution: counting filter")
+    filt = _spikefil(function, type="center")
+    if config.verbosity >= 2:
+        print("deconvotution: counting result")
     return [np.convolve(s, filt) for s in signals]
 
 
-def levinson(toeplitz, signal):
+def _levinson(toeplitz, signal):
     """
     input:
     toeplitz: 1D numpy.array coding toeplitz matrix
@@ -53,7 +57,8 @@ def levinson(toeplitz, signal):
 
 
 from scipy.signal import wiener
-def spikefil(trc, type="max", spike_pos=None):
+def _spikefil(trc, type="max", spike_pos=None):
+    """return recversion (in convolution sense) of trc"""
     trclth = len(trc)
     t0 = 0 # spike position
 
@@ -75,8 +80,6 @@ def spikefil(trc, type="max", spike_pos=None):
         a = np.asarray(range(0, trclth))
         t0 = int(np.sum(np.abs(trc * a)) / np.sum(np.abs(trc)))
 
-    print("t0=", t0)
-
     ac = np.zeros(trclth)
     ccr = np.zeros(trclth)
     for d in range(0, trclth):
@@ -87,5 +90,4 @@ def spikefil(trc, type="max", spike_pos=None):
 
     ccr[:t0 + 1] = trc[:t0 + 1][::-1]
     
-    print("levinson...\n")
-    return levinson(ac, ccr)
+    return _levinson(ac, ccr)
