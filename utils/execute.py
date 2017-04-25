@@ -1,4 +1,5 @@
 import config
+import copy
 from utils import rotate_theoretical, deconvolve, output_filename
 from obspy.core.stream import Stream
 
@@ -33,6 +34,17 @@ def execute_theoretical(data):
     return Stream(stQ.traces + stT.traces)
 
 
+def sum_of_amplitudes(data, azim):
+    if config.VERBOSITY >= 3:
+        print("counting deconvolution for azimuth %d" % azim)
+    data.rotate('NE->RT', azim, 0)
+    
 
 def execute_search(data):
+    if config.VERBOSITY >= 2:
+        print("looking for azimuth")
+    azimuth = np.argmax([sum_of_amplitudes(copy.deepcopy(data), a) for a in range(360)])
+    inci = 0
+    if config.VERBOSITY >= 1:
+        print("azimuth angle: %d inclinaytion angle: %d", azimuth, inci)
     raise NotImplementedError

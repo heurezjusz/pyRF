@@ -17,14 +17,10 @@ args = parser.parse_args()
 from utils import output_filename, execute_theoretical, execute_search
 
 from obspy import read
-from obspy.core.utcdatetime import UTCDateTime
 
 for datafile in vars(args)['files']:
     # reading file
     data = read(datafile)
-    
-    data = data.slice(UTCDateTime('2007-07-16T01:25:18'), UTCDateTime('2007-07-16T01:27:03'))
-
     
     if config.PLOT_DATA_FROM_FILE: data.plot()
 
