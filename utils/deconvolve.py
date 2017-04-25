@@ -5,13 +5,13 @@ def deconvolve(signals, function):
     """returns list of deconvolutions of given signals
     using Toeplitz matrix method"""
     
-    if config.verbosity >= 1:
+    if config.VERBOSITY >= 1:
         print("deconvotution")
     n = len(function)
-    if config.verbosity >= 2:
+    if config.VERBOSITY >= 2:
         print("deconvotution: counting filter")
     filt = _spikefil(function, type="center")
-    if config.verbosity >= 2:
+    if config.VERBOSITY >= 2:
         print("deconvotution: counting result")
     return [np.convolve(s, filt) for s in signals]
 

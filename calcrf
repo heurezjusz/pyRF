@@ -14,14 +14,10 @@ args = parser.parse_args()
 
 
 # program itself
-from utils import deconvolve, output_filename, rotate
+from utils import output_filename, execute_theoretical, execute_search
 
 from obspy import read
 from obspy.core.utcdatetime import UTCDateTime
-from obspy.core.stream import Stream
-import numpy as np
-
-
 
 for datafile in vars(args)['files']:
     # reading file
@@ -32,36 +28,13 @@ for datafile in vars(args)['files']:
     
     if config.PLOT_DATA_FROM_FILE: data.plot()
 
-    # rotating
-    data = rotate(data, mode=config.ROTATION_MODE)
+    if config.MODE == "theoretical":
+        data = execute_theoretical(data)
+    elif config.MODE == "search":
+        data = execute_search(data)
+    else:
+        raise NotImplementedError
 
-    data = data.filter('bandpass', freqmin=config.FREQMIN, freqmax=config.FREQMAX)
-    if config.SAVE_ROTATED:
-        data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)
-    if config.PLOT_ROTATED: data.plot()
-    
-    # dec3 195, 300, 0.1, 1
-
-    if config.NORMALIZE:
-        maxes = data.max()
-        for i in range(len(maxes)):
-            data.traces[i].data /= maxes[i]
-    
-    stL = data.select(component='L')
-    stQ = data.select(component='Q')
-    stT = data.select(component='T')
-
-    print("deconvolution...")
-    RFtraces = deconvolve([stQ.traces[0].data, stT.traces[0].data], stL.traces[0].data)
-    if config.REVERSE_QRF: RFtraces[0] = -RFtraces[0]
-    if config.REVERSE_TRF: RFtraces[1] = -RFtraces[1]
-    stQ.traces[0].data = RFtraces[0]
-    stT.traces[0].data = RFtraces[1]
-
-    #stQ.write(output_filename(datafile, prefix='Qrf_'), config.SAVE_FORMAT)
-    #stT.write(output_filename(datafile, prefix='Trf_'), config.SAVE_FORMAT)
-
-    data = Stream(stQ.traces + stT.traces)
     if config.SAVE_RF:
         data.write(output_filename(datafile, prefix='rf_'), config.SAVE_FORMAT)
     if config.PLOT_RF:

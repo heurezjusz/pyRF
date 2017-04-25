@@ -9,12 +9,15 @@ ARG4 = 1
 # ==================================================== #
 #                     calculations                     #
 # ==================================================== #
+# possible mode of calculations.
+# "theoretical" calculates azimuth and inclination angles from theoretical equations
+# "search" searches azimuth and inclination angle automatically
+MODE = "theoretical"
+
+# verbosity level - level of details printed by program
+VERBOSITY = 2
 
 # ==================== rotating ======================
-# possible mode of rotating.
-# "theoretical" calculates inclination angle from theoretical equation
-# "search" searches azimuth and inclination angle automatically
-ROTATION_MODE = "theoretical"
 
 # %%%%% mode : theoretical
 SLOWNESS = 5.523560e+00 / 111.12
@@ -39,7 +42,6 @@ REVERSE_TRF = False
 
 
 
-
 # ==================================================== #
 #                    saving results                    #
 # ==================================================== #
@@ -54,8 +56,8 @@ SAVE_RF = True
 #                   plotting results                   #
 # ==================================================== #
 # plots data from readed file
-PLOT_DATA_FROM_FILE = True
+PLOT_DATA_FROM_FILE = False
 # plots data after rotation
-PLOT_ROTATED = True
+PLOT_ROTATED = False
 # plots calculated receive function
 PLOT_RF = True
