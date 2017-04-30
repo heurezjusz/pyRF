@@ -12,10 +12,11 @@ ARG4 = 1
 # possible mode of calculations.
 # "theoretical" calculates azimuth and inclination angles from theoretical equations
 # "search" searches azimuth and inclination angle automatically
-MODE = "theoretical"
+#MODE = "theoretical"
+MODE = "search"
 
 # verbosity level - level of details printed by program
-VERBOSITY = 2
+VERBOSITY = 3
 
 # ==================== rotating ======================
 
@@ -23,12 +24,7 @@ VERBOSITY = 2
 SLOWNESS = 5.523560e+00 / 111.12
 DISTANCE = 7.841513e+01
 AZIMUTH = 4.339704e+01
-
-# %%%%% mode : search
-FIRST_PEAK_POSITION = 148
-
-# normalize data after rotation
-NORMALIZE = False
+#AZIMUTH = 31
 
 # =================== filtering ======================
 # uses ObsPy 'boundpass' filter with parameters FREQMIN and FREQMAX
@@ -36,6 +32,10 @@ FREQMIN = 0.03
 FREQMAX = 0.8
 
 # ================ receiver function =================
+# normalize data before and after deconvolution (divide results by maximum absolute value)
+NORMALIZE_BEFORE = False
+NORMALIZE_AFTER = False
+
 # multiplying Q or T component of receiver function by -1
 REVERSE_QRF = True
 REVERSE_TRF = False

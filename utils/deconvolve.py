@@ -4,14 +4,14 @@ import numpy as np
 def deconvolve(signals, function):
     """returns list of deconvolutions of given signals
     using Toeplitz matrix method"""
-    
+
     if config.VERBOSITY >= 1:
         print("deconvotution")
     n = len(function)
-    if config.VERBOSITY >= 2:
+    if config.VERBOSITY >= 4:
         print("deconvotution: counting filter")
     filt = _spikefil(function, type="center")
-    if config.VERBOSITY >= 2:
+    if config.VERBOSITY >= 4:
         print("deconvotution: counting result")
     return [np.convolve(s, filt) for s in signals]
 
