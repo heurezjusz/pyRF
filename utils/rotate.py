@@ -3,13 +3,13 @@ import config
 def rotate_theoretical(data):
     if config.VERBOSITY >= 2:
         print("rotate: counting theoretical azimuth and inlcination")
-    inci = _theoretical_azimuth(config.SLOWNESS, 1.3)
+    inci = _theoretical_inclination(config.SLOWNESS, 1.3)
     data.rotate('ZNE->LQT', config.AZIMUTH, inci)
     return data
 
 
 import math
-def _theoretical_azimuth(slowness, V_S = 6. / math.sqrt(3)):
+def _theoretical_inclination(slowness, V_S = 6. / math.sqrt(3)):
     """Arguments:
         slowness - some constant from file in [seconds / degrees]
         V_S - average velocity of S-waves in shell
