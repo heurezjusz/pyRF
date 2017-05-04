@@ -24,9 +24,9 @@ for datafile in vars(args)['files']:
     if config.PLOT_DATA_FROM_FILE: data.plot()
 
     if config.MODE == "theoretical":
-        data = execute_theoretical(data)
+        data = execute_theoretical(data, datafile)
     elif config.MODE == "search":
-        data = execute_search(data)
+        data = execute_search(data, datafile)
     else:
         raise NotImplementedError
 

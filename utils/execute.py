@@ -37,7 +37,7 @@ def _calculate_rf(data):
     return data
 
 
-def execute_theoretical(data):
+def execute_theoretical(data, datafile):
     # rotating
     data = rotate_theoretical(data)
 
@@ -51,7 +51,7 @@ def execute_theoretical(data):
 def _sum_of_amplitudes(data, azimuth):
     if config.VERBOSITY >= 3:
         print("analyzing data for azimuth=%d" % (azimuth))
-    data.rotate('NE->RT', azimuth)
+    data.rotate('ZNE->LQT', azimuth)
     data.filter('bandpass', freqmin=config.FREQMIN, freqmax=config.FREQMAX)
 
     stR = data.select(component='R')
@@ -80,7 +80,7 @@ def _rms(data, azimuth, inclination):
     return np.sum(result ** 2)
 
 
-def execute_search(data):
+def execute_search(data, datafile):
     if config.VERBOSITY >= 2:
         print("looking for azimuth")
     azimuth = np.argmax([_sum_of_amplitudes(copy.deepcopy(data), a) for a in range(360)])
