@@ -73,7 +73,7 @@ def execute_theoretical(data, datafile):
 
 def _sum_of_amplitudes(data, azimuth):
     if config.VERBOSITY >= 3:
-        print("analyzing data for azimuth=%d" % (azimuth))
+        print("analyzing data for azimuth=%f" % (azimuth))
     data.rotate('ZNE->LQT', azimuth, 0)
 
     data = _calculate_rf(data)
@@ -99,20 +99,28 @@ def _rms(data, azimuth, inclination):
 def execute_search(data, datafile):
     if config.VERBOSITY >= 2:
         print("looking for azimuth")
-    azimuth = np.argmax([_sum_of_amplitudes(copy.deepcopy(data), a) for a in range(360)])
 
-    inclination = 0
+    amin = config.AZIMUTH_ANGLES['min']
+    amax = config.AZIMUTH_ANGLES['max']
+    astep = config.AZIMUTH_ANGLES['step']
+    azimuth = amin + astep * np.argmax([_sum_of_amplitudes(copy.deepcopy(data), a * astep)
+                                        for a in range(int(amin / astep), int(amax / astep) + 1)])
+
+    imin = config.INCLINATION_ANGLES['min']
+    imax = config.INCLINATION_ANGLES['max']
+    istep = config.INCLINATION_ANGLES['step']
+    inclination = imin
     prev = None
-    for i in range(0, 91):
-        inci = i / 2.
-        val = _rms(copy.deepcopy(data), azimuth, i / 2.)
+    for i in range(int(imin / istep), int(imax / istep) + 1):
+        inci = i * istep
+        val = _rms(copy.deepcopy(data), azimuth, inci)
         if prev and prev < val:
             inclination = inci
             break
         prev = val
 
     if config.VERBOSITY >= 1:
-        print("azimuth angle: %d inclination angle: %d" % (azimuth, inclination))
+        print("azimuth angle: %f inclination angle: %f" % (azimuth, inclination))
 
     data.rotate('ZNE->LQT', azimuth, inclination)
 
