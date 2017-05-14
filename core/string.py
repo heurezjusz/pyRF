@@ -1,3 +1,5 @@
+# functions for operating on filenames
+
 import ntpath
 
 def _extract_filemane(path):

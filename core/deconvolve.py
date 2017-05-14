@@ -1,3 +1,5 @@
+# mathematical deconvolution
+
 import config
 import numpy as np
 

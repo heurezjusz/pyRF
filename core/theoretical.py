@@ -1,6 +1,20 @@
-import config
+# theoretical mode main functions
 
-def rotate_theoretical(data):
+import config
+from core import calculate_rf, deconvolve
+
+def theoretical(data, datafile):
+    # rotating
+    data = _rotate_theoretical(data)
+
+    if config.SAVE_ROTATED:
+        data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)
+    if config.PLOT_ROTATED: data.plot()
+    
+    return calculate_rf(data)
+
+
+def _rotate_theoretical(data):
     if config.VERBOSITY >= 2:
         print("rotate: counting theoretical azimuth and inlcination")
     inci = _theoretical_inclination(config.SLOWNESS, 1.3)

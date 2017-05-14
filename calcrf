@@ -13,7 +13,7 @@ args = parser.parse_args()
 
 
 # program itself
-from utils import output_filename, execute_theoretical, execute_search
+from core import output_filename, theoretical, search
 
 from obspy import read
 
@@ -24,9 +24,9 @@ for datafile in vars(args)['files']:
     if config.PLOT_DATA_FROM_FILE: data.plot()
 
     if config.MODE == "theoretical":
-        data = execute_theoretical(data, datafile)
+        data = theoretical(data, datafile)
     elif config.MODE == "search":
-        data = execute_search(data, datafile)
+        data = search(data, datafile)
     else:
         raise NotImplementedError
 
