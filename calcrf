@@ -13,7 +13,7 @@ args = parser.parse_args()
 
 
 # program itself
-from core import output_filename, theoretical, search
+from core import output_filename, rotate_theoretical, rotate_search, calculate_rf
 
 from obspy import read
 
@@ -24,11 +24,17 @@ for datafile in vars(args)['files']:
     if config.PLOT_DATA_FROM_FILE: data.plot()
 
     if config.MODE == "theoretical":
-        data = theoretical(data, datafile)
+        data = rotate_theoretical(data)
     elif config.MODE == "search":
-        data = search(data, datafile)
+        data = rotate_search(data)
     else:
         raise NotImplementedError
+
+    if config.SAVE_ROTATED:
+        data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)
+    if config.PLOT_ROTATED: data.plot()
+
+    data = calculate_rf(data, shift=config.RF_SHIFT)
 
     if config.SAVE_RF:
         data.write(output_filename(datafile, prefix='rf_'), config.SAVE_FORMAT)

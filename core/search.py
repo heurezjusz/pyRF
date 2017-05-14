@@ -7,7 +7,7 @@ from core import calculate_rf, output_filename
 from obspy.core.stream import Stream
 
 
-def search(data, datafile):
+def rotate_search(data):
     if config.VERBOSITY >= 2:
         print("looking for azimuth")
 
@@ -36,12 +36,7 @@ def search(data, datafile):
         print("azimuth angle: %f inclination angle: %f" % (azimuth, inclination))
 
     data.rotate('ZNE->LQT', azimuth, inclination)
-
-    if config.SAVE_ROTATED:
-        data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)
-    if config.PLOT_ROTATED: data.plot()
-    
-    return calculate_rf(data)
+    return data
 
 
 def _sum_of_amplitudes(data, azimuth):
@@ -49,7 +44,7 @@ def _sum_of_amplitudes(data, azimuth):
         print("analyzing data for azimuth=%f" % (azimuth))
     data.rotate('ZNE->LQT', azimuth, 0)
 
-    data = calculate_rf(data)
+    data = calculate_rf(data, filter_config=config.SEARCH_FILTER_FREQ)
 
     rfQ = data.select(component='Q')
     freq = int(1 / rfQ.traces[0].stats['delta'])
@@ -61,7 +56,7 @@ def _rms(data, azimuth, inclination):
         print("analyzing data for inclination=%f" % inclination)
     data.rotate('ZNE->LQT', azimuth, inclination)
 
-    data = calculate_rf(data, zero_s = 2)
+    data = calculate_rf(data, filter_config=config.SEARCH_FILTER_FREQ, shift = 2)
 
     rfQ = data.select(component='Q')
     freq = int(1 / rfQ.traces[0].stats['delta'])

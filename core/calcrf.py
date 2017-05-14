@@ -5,14 +5,14 @@ from obspy.core.stream import Stream
 import config
 from core import deconvolve
 
-def calculate_rf(data, filter_config = {'FREQMIN': config.FREQMIN, 'FREQMAX': config.FREQMAX}, zero_s = 0):
+def calculate_rf(data, filter_config = config.FILTER_FREQ, shift = 0.):
     """
         input:
         [data] - obspy.core.stream.Stream object with event in LQT format.
             After function input [data] may be changed.
         [filter_config] (optional) - Python dictionary with keys 'FREQMIN' and 'FREQMAX',
             used in ObsPy 'boundpass' filter function.
-        [zero] (optional) - "zero" moment is set [zero_s] seconds after beggining of the window.
+        [zero] (optional) - "zero" moment is set [shift] seconds after beggining of the window.
             Default value is 0. (float)
         
         output: obspy.core.stream.Stream object containing
@@ -41,12 +41,12 @@ def calculate_rf(data, filter_config = {'FREQMIN': config.FREQMIN, 'FREQMAX': co
     # setting "zero" moment
     zero_pos = np.argmax(rfL)
     freq = int(1 / stL.traces[0].stats['delta'])
-    if zero_pos < zero_s * freq:
+    if zero_pos < shift * freq:
         rfQ = np.concatenate(np.zeros(zero * freq - zero_pos), rfQ)
         rfT = np.concatenate(np.zeros(zero * freq - zero_pos), rfT)
 
-    stQ.traces[0].data = rfQ[zero_pos - zero_s * freq : ]
-    stT.traces[0].data = rfT[zero_pos - zero_s * freq : ]
+    stQ.traces[0].data = rfQ[zero_pos - shift * freq : ]
+    stT.traces[0].data = rfT[zero_pos - shift * freq : ]
 
     data = Stream(stQ.traces + stT.traces)
     
