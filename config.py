@@ -14,6 +14,24 @@ REVERSE_TRF = False
 # RF_SHIFT seconds after events' window
 RF_SHIFT = 1.
 
+# Cutting events' time window from datafile. Possible modes:
+#  "none" - do not cut. All data from file are used to calculations
+#  "dates" - use data between START_DATE and END_DATE.
+#            START_DATE and END_DATE should be provided in "RRRR-MM-DDThh:mm:ss.(miliseconds) format
+#            (example below)
+#  "date_len" - use WINDOW_LEN (float) seconds beggining at START_DATE.
+#  "seconds" - use data between START_SECOND and END_SECOND (float).
+#              Seconds are counted from begginig of the file.
+CUT_MODE = "dates"
+
+START_DATE = "2007-07-16T01:25:17.9"
+END_DATE = "2007-07-16T01:27:02.97"
+
+WINDOW_LEN = 105.
+
+START_SECOND = 195.
+END_SECOND = 300.
+
 
 # =================== filtering ======================
 # uses ObsPy 'boundpass' filter with parameters FREQMIN and FREQMAX

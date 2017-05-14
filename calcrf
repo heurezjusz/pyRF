@@ -13,13 +13,15 @@ args = parser.parse_args()
 
 
 # program itself
-from core import output_filename, rotate_theoretical, rotate_search, calculate_rf
+from core import output_filename, rotate_theoretical, rotate_search, calculate_rf, cut
 
 from obspy import read
 
 for datafile in vars(args)['files']:
     # reading file
     data = read(datafile)
+    
+    data = cut(data)
     
     if config.PLOT_DATA_FROM_FILE: data.plot()
 
