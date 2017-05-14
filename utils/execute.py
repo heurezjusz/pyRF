@@ -5,34 +5,57 @@ from utils import rotate_theoretical, deconvolve, output_filename
 from obspy.core.stream import Stream
 
 
-def _calculate_rf(data):
+def _calculate_rf(data, filter_config = {'FREQMIN': config.FREQMIN, 'FREQMAX': config.FREQMAX}, zero_s = 0):
+    """
+        input:
+        [data] - obspy.core.stream.Stream object with event in LQT format.
+            After function input [data] may be changed.
+        [filter_config] (optional) - Python dictionary with keys 'FREQMIN' and 'FREQMAX',
+            used in ObsPy 'boundpass' filter function.
+        [zero] (optional) - "zero" moment is set [zero_s] seconds after beggining of the window.
+            Default value is 0. (float)
+        
+        output: obspy.core.stream.Stream object containing
+            calculated reveival function
+    """
+
     # filtering 
-    data = data.filter('bandpass', freqmin=config.FREQMIN, freqmax=config.FREQMAX)
+    data = data.filter('bandpass', freqmin=filter_config['FREQMIN'], freqmax=filter_config['FREQMAX'])
 
     # normalization
     if config.NORMALIZE_BEFORE:
-        maxes = data.max()
-        for i in range(len(maxes)):
-            data.traces[i].data /= maxes[i]
+        mx = max([np.max(t.data) for t in data.traces])
+        mn = min([np.min(t.data) for t in data.traces])
+        for tr in data.traces:
+            tr.data /= mx - mn
 
     # counting receival function
     stL = data.select(component='L')
     stQ = data.select(component='Q')
     stT = data.select(component='T')
 
-    RFtraces = deconvolve([stQ.traces[0].data, stT.traces[0].data], stL.traces[0].data)
-    if config.REVERSE_QRF: RFtraces[0] = -RFtraces[0]
-    if config.REVERSE_TRF: RFtraces[1] = -RFtraces[1]
-    stQ.traces[0].data = RFtraces[0]
-    stT.traces[0].data = RFtraces[1]
+    rfQ, rfT, rfL = deconvolve([stQ.traces[0].data, stT.traces[0].data, stL.traces[0].data], stL.traces[0].data)
+    if config.REVERSE_QRF: rfQ = -rfQ
+    if config.REVERSE_TRF: rfT = -rfT
+
+    # setting "zero" moment
+    zero_pos = np.argmax(rfL)
+    freq = int(1 / stL.traces[0].stats['delta'])
+    if zero_pos < zero_s * freq:
+        rfQ = np.concatenate(np.zeros(zero * freq - zero_pos), rfQ)
+        rfT = np.concatenate(np.zeros(zero * freq - zero_pos), rfT)
+
+    stQ.traces[0].data = rfQ[zero_pos - zero_s * freq : ]
+    stT.traces[0].data = rfT[zero_pos - zero_s * freq : ]
 
     data = Stream(stQ.traces + stT.traces)
     
     # normalization
-    if config.NORMALIZE_BEFORE:
-        maxes = data.max()
-        for i in range(len(maxes)):
-            data.traces[i].data /= maxes[i]
+    if config.NORMALIZE_AFTER:
+        mx = max([np.max(t.data) for t in data.traces])
+        mn = min([np.min(t.data) for t in data.traces])
+        for tr in data.traces:
+            tr.data /= mx - mn
 
     return data
 
@@ -51,32 +74,25 @@ def execute_theoretical(data, datafile):
 def _sum_of_amplitudes(data, azimuth):
     if config.VERBOSITY >= 3:
         print("analyzing data for azimuth=%d" % (azimuth))
-    data.rotate('ZNE->LQT', azimuth)
-    data.filter('bandpass', freqmin=config.FREQMIN, freqmax=config.FREQMAX)
+    data.rotate('ZNE->LQT', azimuth, 0)
 
-    stR = data.select(component='R')
-    stZ = data.select(component='Z')
-    rfR = deconvolve([stR.traces[0].data], stZ.traces[0].data)[0]
-    
-    mx_pos = np.argmax(rfR)
-    freq = int(1 / stR.traces[0].stats['delta'])
-    return np.max(rfR[mx_pos : mx_pos + freq]) - np.min(rfR[mx_pos : mx_pos + freq])
+    data = _calculate_rf(data)
+
+    rfQ = data.select(component='Q')
+    freq = int(1 / rfQ.traces[0].stats['delta'])
+    return np.sum(rfQ.traces[0].data[ : 2 * freq])
 
 
 def _rms(data, azimuth, inclination):
     if config.VERBOSITY >= 3:
         print("analyzing data for inclination=%f" % inclination)
     data.rotate('ZNE->LQT', azimuth, inclination)
-    
-    stL = data.select(component='L')
-    stQ = data.select(component='Q')
-    rfQ = deconvolve([stQ.traces[0].data], stL.traces[0].data)[0]
-    if config.REVERSE_QRF:
-        rfQ *= -1
-    
-    freq = int(1 / stL.traces[0].stats['delta'])
-    mx_pos = np.argmax(rfQ)
-    result = rfQ[mx_pos - 2 * freq : mx_pos]
+
+    data = _calculate_rf(data, zero_s = 2)
+
+    rfQ = data.select(component='Q')
+    freq = int(1 / rfQ.traces[0].stats['delta'])
+    result = rfQ.traces[0].data[ : 2 * freq]
     return np.sum(result ** 2)
 
 
@@ -84,6 +100,7 @@ def execute_search(data, datafile):
     if config.VERBOSITY >= 2:
         print("looking for azimuth")
     azimuth = np.argmax([_sum_of_amplitudes(copy.deepcopy(data), a) for a in range(360)])
+
     inclination = 0
     prev = None
     for i in range(0, 91):
@@ -93,6 +110,7 @@ def execute_search(data, datafile):
             inclination = inci
             break
         prev = val
+
     if config.VERBOSITY >= 1:
         print("azimuth angle: %d inclination angle: %d" % (azimuth, inclination))
 

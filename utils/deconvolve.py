@@ -7,24 +7,30 @@ def deconvolve(signals, function):
 
     if config.VERBOSITY >= 1:
         print("deconvotution")
-    n = len(function)
+
     if config.VERBOSITY >= 4:
         print("deconvotution: counting filter")
+
     filt = _spikefil(function, type="center")
+
     if config.VERBOSITY >= 4:
         print("deconvotution: counting result")
+
     return [np.convolve(s, filt) for s in signals]
 
 
 def _levinson(toeplitz, signal):
     """
     input:
-    toeplitz: 1D numpy.array coding toeplitz matrix
-    signal: b
+    toeplitz: 1D numpy.array coding toeplitz matrix T
+    signal: 1D numpy.array - vector b
 
-    returns: solution of equation T * x = b
+    returns: 1D numpy.array with solution of equation T * x = b
+    
+    
+    Reimplementation of toeplitz.c file from Seismic Handler sources
     """
-    # todo: input checking
+
     m = len(toeplitz)
     r = toeplitz
     g = signal
@@ -58,7 +64,8 @@ def _levinson(toeplitz, signal):
 
 from scipy.signal import wiener
 def _spikefil(trc, type="max", spike_pos=None):
-    """return recversion (in convolution sense) of trc"""
+    """return reversion (in convolution sense) of trc
+    Reimplementation of spiking.c file from Seismic Handler sources"""
     trclth = len(trc)
     t0 = 0 # spike position
 
