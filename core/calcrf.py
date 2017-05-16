@@ -42,8 +42,8 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, shift = 0.):
     zero_pos = np.argmax(rfL)
     freq = int(1 / stL.traces[0].stats['delta'])
     if zero_pos < shift * freq:
-        rfQ = np.concatenate(np.zeros(zero * freq - zero_pos), rfQ)
-        rfT = np.concatenate(np.zeros(zero * freq - zero_pos), rfT)
+        rfQ = np.concatenate(np.zeros(shift * freq - zero_pos), rfQ)
+        rfT = np.concatenate(np.zeros(shift * freq - zero_pos), rfT)
 
     stQ.traces[0].data = rfQ[zero_pos - shift * freq : ]
     stT.traces[0].data = rfT[zero_pos - shift * freq : ]
