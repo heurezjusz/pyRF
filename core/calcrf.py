@@ -2,7 +2,6 @@
 
 import numpy as np
 from obspy.core.stream import Stream
-from obspy.core.utcdatetime import UTCDateTime as utc
 import config
 from core import deconvolve
 
@@ -55,7 +54,6 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, time_from = config.RF
         to_pos += -from_pos
         from_pos = 0
     if to_pos > len(rfQ):
-        print (to_pos - len(rfQ))
         rfQ = np.concatenate((rfQ, np.zeros(to_pos - len(rfQ))))
         rfT = np.concatenate((rfT, np.zeros(to_pos - len(rfT))))
 

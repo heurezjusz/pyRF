@@ -20,10 +20,12 @@ from obspy import read
 for datafile in vars(args)['files']:
     # reading file
     data = read(datafile)
+    if config.PLOT_DATA_FROM_FILE: data.plot()
     
     data = cut(data)
-    
-    if config.PLOT_DATA_FROM_FILE: data.plot()
+    if config.SAVE_CUT:
+        data.write(output_filename(datafile, prefix='cut_'), config.SAVE_FORMAT)
+    if config.PLOT_CUT: data.plot()
 
     if config.MODE == "theoretical":
         data = rotate_theoretical(data)
