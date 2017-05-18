@@ -10,7 +10,7 @@ REVERSE_QRF = True
 REVERSE_TRF = False
 
 # =================== time window ======================
-
+# *** DATA
 # Cutting events' time window from datafile. Possible modes:
 #  "none" - do not cut. All data from file are used to calculations
 #  "dates" - use data between START_DATE and END_DATE.
@@ -19,16 +19,22 @@ REVERSE_TRF = False
 #  "date_len" - use WINDOW_LEN (float) seconds beggining at START_DATE.
 #  "seconds" - use data between START_SECOND and END_SECOND (float).
 #              Seconds are counted from begginig of the file.
-CUT_MODE = "dates"
 
-START_DATE = "2007-07-16T01:25:17.9"
-END_DATE = "2007-07-16T01:27:02.97"
+#CUT_MODE "none"
 
-WINDOW_LEN = 105.
+#CUT_MODE = "dates"
+#START_DATE = "2007-07-16T01:25:17.9"
+#END_DATE = "2007-07-16T01:27:02.97"
 
+#CUT_MODE = "date_len"
+#START_DATE = "2007-07-16T01:25:17.9"
+#WINDOW_LEN = 105.
+
+CUT_MODE = "seconds"
 START_SECOND = 195.
 END_SECOND = 300.
 
+# *** RESULT
 # Result time frame measured from time 0.
 # obtained receival function will be cutted to time frame below (in seconds, float):
 RF_TIME_FROM = -5.
