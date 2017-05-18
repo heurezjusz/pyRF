@@ -2,12 +2,15 @@
 
 import config
 from core import calculate_rf, deconvolve
+from external import collect_data
 
 def rotate_theoretical(data):
     if config.VERBOSITY >= 2:
         print("rotate: counting theoretical azimuth and inlcination")
-    inci = _theoretical_inclination(config.SLOWNESS, 1.3)
-    data.rotate('ZNE->LQT', config.AZIMUTH, inci)
+    
+    azimuth, slowness = _collect_data()
+    inci = _theoretical_inclination(slowness, 1.3)
+    data.rotate('ZNE->LQT', azimuth, inci)
     return data
 
 
@@ -24,3 +27,14 @@ def _theoretical_inclination(slowness, V_S = 6. / math.sqrt(3)):
     d = 2 * (V_S ** 2) * slowness * c
     e = 1. - 2 * (V_S ** 2) * (slowness ** 2)
     return math.atan(d / e) * 180 / math.pi
+
+
+def _collect_data():
+    if config.COLLECTDATA_MODE == "manual":
+        return config.AZIMUTH, config.SLOWNESS
+
+    elif config.COLLECTDATA_MODE == "find":
+        return collect_data()
+
+    else:
+        raise NotImplementedError

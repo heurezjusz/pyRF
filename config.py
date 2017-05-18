@@ -82,11 +82,17 @@ SEARCH_FILTER_FREQ = { 'FREQMIN': 0.1, 'FREQMAX': 0.5 }
 #               theoretical mode options               #
 # ---------------------------------------------------- #
 
+#COLLECTDATA_MODE = "manual"
 SLOWNESS = 5.523560e+00 / 111.12
-DISTANCE = 7.841513e+01
-AZIMUTH = 4.339704e+01
+#DISTANCE = 7.841513e+01
+#AZIMUTH = 4.339704e+01
 
+COLLECTDATA_MODE = "find"
+STATIONS_DATA = 'example/stations_data.csv'
+EVENTS_DATA = 'example/PDE_join.csv'
 
+# earth radius in meters
+EARTH_RADIUS = 6378137.0
 # ==================================================== #
 #                    saving results                    #
 # ==================================================== #
@@ -106,8 +112,8 @@ SAVE_RF = True
 # plots data from readed file
 PLOT_DATA_FROM_FILE = False
 # plot data after cutting, filename: cut_[filename]
-PLOT_CUT = True
+PLOT_CUT = False
 # plots data after rotation
-PLOT_ROTATED = True
+PLOT_ROTATED = False
 # plots calculated receive function
 PLOT_RF = True

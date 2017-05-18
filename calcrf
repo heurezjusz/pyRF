@@ -12,12 +12,19 @@ parser.add_argument('files', type=str, nargs='+',
 args = parser.parse_args()
 
 
+def stop():
+    return 1 / 0
+
 # program itself
 from core import output_filename, rotate_theoretical, rotate_search, calculate_rf, cut
+from external import collect_data
+
 
 from obspy import read
 
 for datafile in vars(args)['files']:
+    collect_data(datafile)
+    continue
     # reading file
     data = read(datafile)
     if config.PLOT_DATA_FROM_FILE: data.plot()

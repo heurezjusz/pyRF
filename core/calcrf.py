@@ -1,4 +1,6 @@
-# function counting receival function
+# python3 script counting receival function
+
+__author__ = 'Patryk Czajka'
 
 import numpy as np
 from obspy.core.stream import Stream

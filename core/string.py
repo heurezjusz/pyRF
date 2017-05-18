@@ -9,5 +9,10 @@ def output_filename(path, prefix=''):
     return 'out/' + prefix + _extract_filemane(path) + '.' + config.SAVE_FORMAT
 
 
+def station_event(path):
+    res = _extract_filemane(path).split('_')
+    return res[0], res[1] + '_' + res[2]
+
+
 def _extract_filemane(path):
     return splitext(ntpath.basename(path))[0]
