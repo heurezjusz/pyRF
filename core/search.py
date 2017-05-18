@@ -44,11 +44,11 @@ def _sum_of_amplitudes(data, azimuth):
         print("analyzing data for azimuth=%f" % (azimuth))
     data.rotate('ZNE->LQT', azimuth, 0)
 
-    data = calculate_rf(data, filter_config=config.SEARCH_FILTER_FREQ)
+    data = calculate_rf(data, filter_config=config.SEARCH_FILTER_FREQ,
+                        time_from = 0, time_to = 2)
 
     rfQ = data.select(component='Q')
-    freq = int(1 / rfQ.traces[0].stats['delta'])
-    return np.sum(rfQ.traces[0].data[ : 2 * freq])
+    return np.sum(rfQ.traces[0].data)
 
 
 def _rms(data, azimuth, inclination):
@@ -56,9 +56,8 @@ def _rms(data, azimuth, inclination):
         print("analyzing data for inclination=%f" % inclination)
     data.rotate('ZNE->LQT', azimuth, inclination)
 
-    data = calculate_rf(data, filter_config=config.SEARCH_FILTER_FREQ, shift = 2)
+    data = calculate_rf(data, filter_config=config.SEARCH_FILTER_FREQ,
+                        time_from = -2, time_to = 0)
 
     rfQ = data.select(component='Q')
-    freq = int(1 / rfQ.traces[0].stats['delta'])
-    result = rfQ.traces[0].data[ : 2 * freq]
-    return np.sum(result ** 2)
+    return np.sum(rfQ.traces[0].data ** 2)

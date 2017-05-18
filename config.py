@@ -10,9 +10,6 @@ REVERSE_QRF = True
 REVERSE_TRF = False
 
 # =================== time window ======================
-# set "zero moment" (theoretical beggining of the event)
-# RF_SHIFT seconds after events' window
-RF_SHIFT = 1.
 
 # Cutting events' time window from datafile. Possible modes:
 #  "none" - do not cut. All data from file are used to calculations
@@ -31,6 +28,14 @@ WINDOW_LEN = 105.
 
 START_SECOND = 195.
 END_SECOND = 300.
+
+# Result time frame measured from time 0.
+# obtained receival function will be cutted to time frame below (in seconds, float):
+RF_TIME_FROM = -5.
+RF_TIME_TO = 200.
+
+# time 0 will be set RF_SHIFT seconds after the theoretical time 0 (maximum in deconvolved L trace)
+RF_SHIFT = 0.
 
 
 # =================== filtering ======================

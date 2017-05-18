@@ -2,22 +2,28 @@
 
 import numpy as np
 from obspy.core.stream import Stream
+from obspy.core.utcdatetime import UTCDateTime as utc
 import config
 from core import deconvolve
 
-def calculate_rf(data, filter_config = config.FILTER_FREQ, shift = 0.):
+def calculate_rf(data, filter_config = config.FILTER_FREQ, time_from = config.RF_TIME_FROM,
+                 time_to = config.RF_TIME_TO, zero_shift = 0.):
     """
         input:
         [data] - obspy.core.stream.Stream object with event in LQT format.
             After function input [data] may be changed.
         [filter_config] (optional) - Python dictionary with keys 'FREQMIN' and 'FREQMAX',
             used in ObsPy 'boundpass' filter function.
-        [zero] (optional) - "zero" moment is set [shift] seconds after beggining of the window.
+        [time_from, time_to] (floats, optional)- result will contain data between
+            [time_from] and [time_to] seconds. Time is measured from time 0.
+        [zero_shift] (float, optional) - time 0 is set [zero_shift] seconds after theoretical
+            time 0 (maximum in deconvolved L trace).
             Default value is 0. (float)
         
         output: obspy.core.stream.Stream object containing
             calculated reveival function
     """
+    assert time_from < time_to
 
     # filtering 
     data = data.filter('bandpass', freqmin=filter_config['FREQMIN'], freqmax=filter_config['FREQMAX'])
@@ -39,14 +45,26 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, shift = 0.):
     if config.REVERSE_TRF: rfT = -rfT
 
     # setting "zero" moment
-    zero_pos = np.argmax(rfL)
     freq = int(1 / stL.traces[0].stats['delta'])
-    if zero_pos < shift * freq:
-        rfQ = np.concatenate(np.zeros(shift * freq - zero_pos), rfQ)
-        rfT = np.concatenate(np.zeros(shift * freq - zero_pos), rfT)
+    zero_pos = np.argmax(rfL) + int(freq * zero_shift)
+    from_pos = zero_pos + int(time_from * freq)
+    to_pos = zero_pos + int(time_to * freq)
+    if from_pos < 0:
+        rfQ = np.concatenate((np.zeros(-from_pos), rfQ))
+        rfT = np.concatenate((np.zeros(-from_pos), rfT))
+        to_pos += -from_pos
+        from_pos = 0
+    if to_pos > len(rfQ):
+        print (to_pos - len(rfQ))
+        rfQ = np.concatenate((rfQ, np.zeros(to_pos - len(rfQ))))
+        rfT = np.concatenate((rfT, np.zeros(to_pos - len(rfT))))
 
-    stQ.traces[0].data = rfQ[zero_pos - shift * freq : ]
-    stT.traces[0].data = rfT[zero_pos - shift * freq : ]
+    
+    stQ.traces[0].data = rfQ[from_pos : to_pos]
+    stT.traces[0].data = rfT[from_pos : to_pos]
+
+    stQ.traces[0].stats.starttime = time_from
+    stT.traces[0].stats.starttime = time_from
 
     data = Stream(stQ.traces + stT.traces)
     

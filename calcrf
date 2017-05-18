@@ -36,7 +36,7 @@ for datafile in vars(args)['files']:
         data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)
     if config.PLOT_ROTATED: data.plot()
 
-    data = calculate_rf(data, shift=config.RF_SHIFT)
+    data = calculate_rf(data, zero_shift=config.RF_SHIFT)
 
     if config.SAVE_RF:
         data.write(output_filename(datafile, prefix='rf_'), config.SAVE_FORMAT)
