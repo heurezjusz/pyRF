@@ -22,16 +22,16 @@ from external import collect_data
 
 from obspy import read
 
-for datafile in vars(args)['files']:
-    collect_data(datafile)
-    continue
+for filename in vars(args)['files']:
+    #collect_data(filename)
+    #continue
     # reading file
-    data = read(datafile)
+    data = read(filename)
     if config.PLOT_DATA_FROM_FILE: data.plot()
     
     data = cut(data)
     if config.SAVE_CUT:
-        data.write(output_filename(datafile, prefix='cut_'), config.SAVE_FORMAT)
+        data.write(output_filename(filename, prefix='cut_'), config.SAVE_FORMAT)
     if config.PLOT_CUT: data.plot()
 
     if config.MODE == "theoretical":
@@ -42,12 +42,12 @@ for datafile in vars(args)['files']:
         raise NotImplementedError
 
     if config.SAVE_ROTATED:
-        data.write(output_filename(datafile, prefix='rotated_'), config.SAVE_FORMAT)
+        data.write(output_filename(filename, prefix='rotated_'), config.SAVE_FORMAT)
     if config.PLOT_ROTATED: data.plot()
 
     data = calculate_rf(data, zero_shift=config.RF_SHIFT)
 
     if config.SAVE_RF:
-        data.write(output_filename(datafile, prefix='rf_'), config.SAVE_FORMAT)
+        data.write(output_filename(filename, prefix='rf_'), config.SAVE_FORMAT)
     if config.PLOT_RF:
         data.plot()
