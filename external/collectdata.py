@@ -27,15 +27,18 @@ def collect_data(filename):
     ev_lat, ev_lon, ev_time, ev_depth = events_coordinates[event]
     stat_lat, stat_lon = stations_coordinates[station]
 
+    print ( (stat_lat, stat_lon, ev_lat, ev_lon))
     dist_m, azimuth, _ = gps2dist_azimuth(stat_lat, stat_lon, ev_lat, ev_lon)
-    dist_deg = 360 * dist_m / (config.EARTH_RADIUS * 2 * math.pi)
-    
+
+    dist_deg = 180 * dist_m / (config.EARTH_RADIUS * math.pi)
+
     model = TauPyModel(model="iasp91")
     arr = model.get_travel_times(source_depth_in_km = ev_depth,
                                  distance_in_degree = dist_deg, phase_list=['P'])[0]
 
-    slowness = arr.time / dist_deg
-    print ( slowness, config.SLOWNESS )
+    slowness = arr.ray_param * 1000 / config.EARTH_RADIUS
+
+    return azimuth, slowness
 
 
 def _load_events_coordinates(filepath):

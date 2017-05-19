@@ -35,7 +35,7 @@ for filename in vars(args)['files']:
     if config.PLOT_CUT: data.plot()
 
     if config.MODE == "theoretical":
-        data = rotate_theoretical(data)
+        data = rotate_theoretical(data, filename)
     elif config.MODE == "search":
         data = rotate_search(data)
     else:
