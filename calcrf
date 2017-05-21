@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 import config
+import os
 
 # parsing arguments
 import argparse
 parser = argparse.ArgumentParser()
 
-parser.add_argument('files', type=str, nargs='+',
-        help='names of files with data')
+parser.add_argument('data_catalog', type=str,
+        help='name of a catalog with data')
 
 args = parser.parse_args()
 
@@ -21,12 +22,14 @@ from external import collect_data
 
 
 from obspy import read
+path = vars(args)['data_catalog']
 
-for filename in vars(args)['files']:
-    #collect_data(filename)
-    #continue
+for filename in os.listdir(path):
+    if config.VERBOSITY >= 1:
+        print ( filename )
+
     # reading file
-    data = read(filename)
+    data = read(path + '/' + filename)
     if config.PLOT_DATA_FROM_FILE: data.plot()
     
     data = cut(data)
