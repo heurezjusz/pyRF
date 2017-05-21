@@ -1,4 +1,4 @@
-__author__ = 'Maria G'
+__author__ = 'Maria G, Patryk Czajka'
 
 import config
 import csv
@@ -27,7 +27,6 @@ def collect_data(filename):
     ev_lat, ev_lon, ev_time, ev_depth = events_coordinates[event]
     stat_lat, stat_lon = stations_coordinates[station]
 
-    print ( (stat_lat, stat_lon, ev_lat, ev_lon))
     dist_m, azimuth, _ = gps2dist_azimuth(stat_lat, stat_lon, ev_lat, ev_lon)
 
     dist_deg = 180 * dist_m / (config.EARTH_RADIUS * math.pi)
