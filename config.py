@@ -79,16 +79,32 @@ SEARCH_FILTER_FREQ = { 'FREQMIN': 0.1, 'FREQMAX': 0.5 }
 
 
 # ---------------------------------------------------- #
-#               theoretical mode options               #
+#              theoretical mode constants              #
 # ---------------------------------------------------- #
 
+# ===== average velocity of S-waves in shell =====
+# velocity for station in format ('station ID': velocity in km/s)
+VS_STATION = {
+    'KSP': 1.3,
+}
+# velocity for stations not mentioned in VS_STATION
+import math
+VS_DEFAULT = 6. / math.sqrt(3)
+
+
+# ==== slowness and back-azimuth of event ====
+# pass the values manually:
+
 #COLLECTDATA_MODE = "manual"
-SLOWNESS = 5.523560e+00 / 111.12
-#DISTANCE = 7.841513e+01
+#SLOWNESS = 5.523560e+00 / 111.12
 #AZIMUTH = 4.339704e+01
 
+# count the values from station and event's data:
+
 COLLECTDATA_MODE = "find"
+# file with coordinated of the stations in format (station ID, latitude, longitude)
 STATIONS_DATA = 'example/stations_data.csv'
+# file with events' data
 EVENTS_DATA = 'example/PDE_join.csv'
 
 # earth radius in meters
