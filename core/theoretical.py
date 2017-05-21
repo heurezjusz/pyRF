@@ -31,7 +31,7 @@ def _theoretical_inclination(slowness, V_S):
 
 def _collect_data(filename):
     station, _ = station_event(filename)
-    V_S = config.VS_STAION.get(station)
+    V_S = config.VS_STATION.get(station)
     if V_S is None:
         V_S = config.VS_DEFAULT
 

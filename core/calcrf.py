@@ -20,11 +20,14 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, time_from = config.RF
         [zero_shift] (float, optional) - time 0 is set [zero_shift] seconds after theoretical
             time 0 (maximum in deconvolved L trace).
             Default value is 0. (float)
+        [zero_date] (obspy.core.utcdatetime.UTCDateTime or convertable, optional)
+            - time 0 is represented as [zero_date] time
         
         output: obspy.core.stream.Stream object containing
             calculated reveival function
     """
     assert time_from < time_to
+    zero_date = _get_zero_date(data)
 
     # filtering 
     data = data.filter('bandpass', freqmin=filter_config['FREQMIN'], freqmax=filter_config['FREQMAX'])
@@ -63,8 +66,8 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, time_from = config.RF
     stQ.traces[0].data = rfQ[from_pos : to_pos]
     stT.traces[0].data = rfT[from_pos : to_pos]
 
-    stQ.traces[0].stats.starttime = time_from
-    stT.traces[0].stats.starttime = time_from
+    stQ.traces[0].stats.starttime = zero_date + time_from
+    stT.traces[0].stats.starttime = zero_date + time_from
 
     data = Stream(stQ.traces + stT.traces)
     
@@ -76,3 +79,19 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, time_from = config.RF
             tr.data /= mx - mn
 
     return data
+
+
+from obspy.core.utcdatetime import UTCDateTime as utc
+
+def _get_zero_date(data):
+    if config.TIME0_FORMAT == "zero":
+        return utc(0.)
+    
+    elif config.TIME0_FORMAT == "given":
+        return utc(config.TIME0)
+    
+    elif config.TIME0_FORMAT == "relative":
+        return data.traces[0].stats.starttime + config.TIME0_S
+    
+    else:
+        raise NotImplementedError

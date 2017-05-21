@@ -34,11 +34,27 @@ CUT_MODE = "none"
 #START_SECOND = 195.
 #END_SECOND = 300.
 
-# *** RESULT
+# ==== RESULT time window ====
 # Result time frame measured from time 0.
 # obtained receival function will be cutted to time frame below (in seconds, float):
 RF_TIME_FROM = -5.
 RF_TIME_TO = 200.
+
+
+# =================== time 0 output format ======================
+# set time 0 as 0s (obspy interpretes 0s as 00:00 of 01.01.1970)
+TIME0_FORMAT = "zero"
+
+# set time 0 as given date.
+# Date should be provided in "RRRR-MM-DDThh:mm:ss.(miliseconds) format (example below)
+#TIME0_FORMAT = "given"
+#TIME0 = "2007-07-16T01:25:17.9"
+
+# set time 0 TIME0_S (float) seconds after beginning of time window
+#     (see 'time window' section above)
+#TIME0_FORMAT = "relative"
+#TIME0_S = 0.
+
 
 # time 0 will be set RF_SHIFT seconds after the theoretical time 0 (maximum in deconvolved L trace)
 RF_SHIFT = 0.
@@ -109,6 +125,8 @@ EVENTS_DATA = 'example/PDE_join.csv'
 
 # earth radius in meters
 EARTH_RADIUS = 6378137.0
+
+
 # ==================================================== #
 #                    saving results                    #
 # ==================================================== #
