@@ -68,6 +68,9 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, time_from = config.RF
 
     stQ.traces[0].stats.starttime = zero_date + time_from
     stT.traces[0].stats.starttime = zero_date + time_from
+    
+    stQ.traces[0].stats.channel = 'RFQ'
+    stT.traces[0].stats.channel = 'RFT'
 
     data = Stream(stQ.traces + stT.traces)
     
