@@ -800,3 +800,4 @@ time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,
 2011-09-03T04:48:57.310Z,-56.451,-26.847,84,6.4,mww,254,26.4,,1,us,usp000j7gq,2015-05-13T18:54:00.000Z,"South Sandwich Islands region",earthquake,,,,,reviewed,us,us
 2011-09-02T13:47:09.620Z,-28.398,-63.029,578.9,6.7,mww,532,24.9,,0.85,us,usp000j7ee,2015-05-13T18:54:00.000Z,"Santiago Del Estero, Argentina",earthquake,,3.1,,,reviewed,us,us
 2011-09-02T10:55:53.590Z,52.171,-171.708,32,6.9,mww,779,19.5,,1.41,us,usp000j7dc,2016-02-11T17:43:19.356Z,"Fox Islands, Aleutian Islands, Alaska",earthquake,,,,,reviewed,us,us
+2007-07-16T01:13:22.370Z,37.53,138.45,12,6.6,mww,----

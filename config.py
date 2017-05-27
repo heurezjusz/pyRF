@@ -131,11 +131,11 @@ STATIONS_DATA = 'example/stationlist.txt'
 # File with events data.
 # Program supports two most popular formats:
 # european (EVENTS_FORMAT = "EU", file: example/eventlist_eu.txt) and american
-#EVENTS_FORMAT = 'EU'
-#EVENTS_DATA = 'example/eventlist_eu.txt'
+EVENTS_FORMAT = 'EU'
+EVENTS_DATA = 'example/eventlist_eu.txt'
 
-EVENTS_FORMAT = 'US'
-EVENTS_DATA = 'example/eventlist_us.csv'
+#EVENTS_FORMAT = 'US'
+#EVENTS_DATA = 'example/eventlist_us.csv'
 
 # ==================================================== #
 #                    saving results                    #

@@ -74,8 +74,9 @@ def _load_events_coordinates_US(filepath):
         reader = csv.reader(f, delimiter=",")
         next(reader)
         for row in reader:
-            label = _datetime_to_label(row[0])
-            result[label] = (float(row[1]), float(row[2]), UTCDateTime(row[0]), float(row[3]))
+            if len(row): # Windows line ending creates empty rows
+                label = _datetime_to_label(row[0])
+                result[label] = (float(row[1]), float(row[2]), UTCDateTime(row[0]), float(row[3]))
     return result
 
 
@@ -84,8 +85,10 @@ def _load_events_coordinates_EU(filepath):
     with open(filepath, 'r') as f:
         reader = csv.reader(f, delimiter="\t")
         for row in reader:
-            label = _datetime_to_label(row[0])
-            result[label] = (float(row[3]), float(row[4]), UTCDateTime(row[0]), float(row[5]))
+            print (row )
+            if len(row): # Windows line ending creates empty rows
+                label = _datetime_to_label(row[0])
+                result[label] = (float(row[3]), float(row[4]), UTCDateTime(row[0]), float(row[5]))
     return result
 
 
