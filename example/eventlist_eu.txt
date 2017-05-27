@@ -1,0 +1,801 @@
+2017-05-15T13:22:38	6.2	mww	-4.02	152.49	10.0	New Britain Region, P.N.G.
+2017-05-12T10:41:26	6.2	mww	12.91	-90.06	10.0	Off Coast of Central America
+2017-05-10T23:23:36	6.5	mww	-56.41	-25.76	10.0	South Sandwich Islands Region
+2017-05-09T13:52:10	6.8	mww	-14.60	167.38	169.0	Vanuatu Islands
+2017-05-09T01:54:14	6.0	mww	24.43	126.32	10.0	Ryukyu Islands, Japan
+2017-05-08T17:00:47	6.2	mww	51.75	-178.64	10.0	Andreanof Islands, Aleutian Islands
+2017-05-03T04:47:13	6.0	mww	39.50	71.45	10.0	Tajikistan
+2017-05-01T14:18:15	6.3	mww	59.83	-136.70	2.5	Southeastern Alaska
+2017-05-01T12:31:55	6.2	mww	59.83	-136.68	8.0	Southeastern Alaska
+2017-04-28T20:23:17	6.9	mww	5.51	125.08	26.0	Mindanao, Philippines
+2017-04-24T21:38:30	6.9	mww	-33.03	-72.05	28.0	Off Coast of Central Chile
+2017-04-23T02:36:07	6.0	mww	-33.04	-72.01	21.0	Off Coast of Central Chile
+2017-04-18T17:11:47	6.0	mww	-18.09	-178.37	628.0	Fiji Islands Region
+2017-04-15T08:19:43	6.2	mww	-23.27	-67.77	155.0	Chile-Argentina Border Region
+2017-04-05T06:09:12	6.1	mww	35.78	60.44	13.0	Northern and Central Iran
+2017-04-03T17:40:18	6.5	mww	-22.68	25.16	29.0	Botswana
+2017-03-29T04:09:24	6.6	mww	56.94	162.79	17.0	Near East Coast of Kamchatka
+2017-03-27T10:50:20	6.2	mww	52.76	172.26	20.0	Near Islands, Aleutian Islands
+2017-03-19T15:43:25	6.0	mww	-8.14	160.75	8.4	Solomon Islands
+2017-03-14T02:51:16	6.0	mww	6.15	92.30	10.0	Nicobar Islands, India Region
+2017-03-05T22:47:53	6.3	mww	-5.99	149.36	37.0	New Britain Region, P.N.G.
+2017-03-04T02:58:20	6.1	mww	-7.33	155.75	17.0	Solomon Islands
+2017-02-24T17:28:44	6.9	mww	-23.26	-178.80	414.5	South of Fiji Islands
+2017-02-21T14:09:04	6.5	mww	-19.28	-63.90	596.0	Southern Bolivia
+2017-02-18T12:10:17	6.4	mww	-23.86	-66.66	222.0	Jujuy Province, Argentina
+2017-02-10T14:03:43	6.5	mww	9.91	125.45	15.0	Mindanao, Philippines
+2017-02-07T22:03:56	6.3	mww	25.19	63.26	29.1	Southwestern Pakistan
+2017-01-22T04:30:22	7.9	mww	-6.25	155.17	135.0	Solomon Islands
+2017-01-19T23:04:21	6.5	mww	-10.35	161.34	36.0	Solomon Islands
+2017-01-10T15:27:14	6.3	mww	-10.11	161.03	26.0	Solomon Islands
+2017-01-10T06:13:48	7.3	mww	4.48	122.62	627.2	Celebes Sea
+2017-01-08T23:47:14	6.0	mww	74.39	-92.42	31.0	Queen Elizabeth Islands, Canada
+2017-01-03T22:40:12	6.0	mww	-19.12	176.19	10.0	South of Fiji Islands
+2017-01-03T21:52:30	6.9	mww	-19.37	176.05	12.0	South of Fiji Islands
+2017-01-02T13:14:02	6.3	mww	-23.25	179.24	551.6	South of Fiji Islands
+2016-12-29T22:30:19	6.3	mww	-9.03	118.66	79.0	Sumbawa Region, Indonesia
+2016-12-25T14:22:27	7.6	mww	-43.41	-73.94	38.0	Southern Chile
+2016-12-24T01:32:16	6.0	mww	-5.25	153.58	35.0	New Ireland Region, P.N.G.
+2016-12-21T00:17:14	6.7	mww	-7.51	127.92	152.0	Banda Sea
+2016-12-20T12:33:14	6.0	mww	-10.18	160.91	10.0	Solomon Islands
+2016-12-20T04:21:29	6.4	mww	-10.18	161.23	20.0	Solomon Islands
+2016-12-18T13:30:10	6.4	mww	-9.97	-70.97	612.0	Peru-Brazil Border Region
+2016-12-18T09:47:06	6.2	mww	8.37	137.67	19.0	W. Caroline Islands, Micronesia
+2016-12-17T11:27:36	6.3	mww	-5.63	154.02	8.4	Solomon Islands
+2016-12-17T10:51:10	7.9	mww	-4.50	153.52	94.5	New Ireland Region, P.N.G.
+2016-12-14T02:01:22	6.0	mww	21.29	144.40	22.4	Mariana Islands Region
+2016-12-10T16:24:34	6.0	mww	-5.66	154.47	142.6	Solomon Islands
+2016-12-09T19:10:06	6.9	mww	-10.75	161.13	19.7	Solomon Islands
+2016-12-08T21:56:07	6.5	mww	-10.84	161.31	12.3	Solomon Islands
+2016-12-08T17:38:46	7.8	mww	-10.68	161.33	40.0	Solomon Islands
+2016-12-08T14:49:45	6.6	mww	40.45	-126.19	8.4	Off Coast of N. California
+2016-12-08T05:15:04	6.0	mww	43.82	86.35	17.6	Northern Xinjiang, China
+2016-12-06T22:03:33	6.5	mww	5.28	96.17	13.0	Northern Sumatra, Indonesia
+2016-12-05T01:13:04	6.3	mww	-7.32	123.38	526.0	Banda Sea
+2016-12-01T22:40:26	6.2	mww	-15.31	-70.83	12.0	Southern Peru
+2016-11-25T14:24:30	6.6	mww	39.27	73.98	17.0	Tajikistan-Xinjiang Border Region
+2016-11-24T18:43:47	6.9	mww	11.91	-88.90	10.0	Off Coast of Central America
+2016-11-21T20:59:49	6.9	mww	37.39	141.39	9.0	Near East Coast of Honshu, Japan
+2016-11-20T20:57:44	6.4	mww	-31.62	-68.63	108.0	San Juan Province, Argentina
+2016-11-14T00:34:22	6.5	mww	-42.61	173.25	9.0	South Island, New Zealand
+2016-11-13T13:31:25	6.2	mww	-42.31	173.70	2.1	South Island, New Zealand
+2016-11-13T11:52:45	6.1	mww	-42.18	173.62	14.0	South Island, New Zealand
+2016-11-13T11:32:06	6.5	mww	-42.32	173.67	10.0	South Island, New Zealand
+2016-11-13T11:02:56	7.8	mww	-42.74	173.05	15.1	South Island, New Zealand
+2016-11-11T21:42:59	6.1	mww	38.50	141.57	42.4	Near East Coast of Honshu, Japan
+2016-11-08T04:55:45	6.0	mww	-36.58	-73.56	20.0	Near Coast of Central Chile
+2016-11-04T16:20:44	6.3	mww	-35.09	-71.05	90.0	Central Chile
+2016-11-01T19:03:30	6.0	mww	-6.10	148.66	52.0	New Britain Region, P.N.G.
+2016-10-30T06:40:18	6.6	mww	42.86	13.10	8.0	Central Italy
+2016-10-27T20:32:55	6.0	mww	-33.78	-72.53	12.6	Off Coast of Central Chile
+2016-10-26T19:18:08	6.1	mww	42.96	13.07	10.0	Central Italy
+2016-10-26T05:19:49	6.1	mww	-15.44	-174.86	10.0	Tonga Islands
+2016-10-21T05:07:22	6.2	mww	35.37	133.81	5.6	Western Honshu, Japan
+2016-10-19T00:26:01	6.6	mww	-4.86	108.16	614.0	Java Sea
+2016-10-17T06:14:58	6.8	mww	-6.00	148.89	42.0	New Britain Region, P.N.G.
+2016-10-15T08:03:38	6.3	mww	-4.27	150.36	442.0	New Britain Region, P.N.G.
+2016-09-24T21:28:41	6.9	mww	-19.78	-178.24	596.4	Fiji Islands Region
+2016-09-24T21:07:15	6.4	mww	-18.17	-174.98	202.0	Tonga Islands
+2016-09-23T22:53:10	6.3	mww	6.57	126.49	65.0	Mindanao, Philippines
+2016-09-23T00:14:34	6.2	mww	34.46	141.64	10.0	Off East Coast of Honshu, Japan
+2016-09-20T16:21:16	6.1	mww	30.50	142.05	9.0	Southeast of Honshu, Japan
+2016-09-17T01:20:17	6.0	mww	-2.08	140.57	9.0	Near North Coast of Irian Jaya
+2016-09-14T07:25:00	6.0	mww	-9.33	159.17	14.0	Solomon Islands
+2016-09-14T01:58:31	6.0	mww	7.37	-76.17	18.0	Northern Colombia
+2016-09-10T10:08:20	6.1	mww	-5.57	-76.95	121.0	Northern Peru
+2016-09-08T21:46:20	6.1	mww	-54.61	158.71	10.0	Macquarie Island Region
+2016-09-05T22:54:03	6.1	mww	54.42	168.54	8.0	Komandorskiye Ostrova Region
+2016-09-01T17:14:06	6.1	mww	-37.05	178.93	13.7	Off E. Coast of N. Island, N.Z.
+2016-09-01T16:37:57	7.0	mww	-37.36	179.15	19.0	Off E. Coast of N. Island, N.Z.
+2016-08-31T03:11:34	6.8	mww	-3.68	152.79	476.0	New Ireland Region, P.N.G.
+2016-08-29T04:29:57	7.1	mww	-0.05	-17.83	10.0	North of Ascension Island
+2016-08-24T10:34:54	6.8	mww	20.92	94.57	82.0	Myanmar
+2016-08-24T01:36:32	6.2	mww	42.72	13.19	4.4	Central Italy
+2016-08-23T19:39:44	6.0	mww	-7.29	122.43	533.0	Flores Sea
+2016-08-21T03:45:23	6.1	mww	-55.31	-31.75	12.0	South Georgia Island Region
+2016-08-20T09:01:26	6.0	mww	40.39	143.68	10.0	Off East Coast of Honshu, Japan
+2016-08-19T07:32:22	7.4	mww	-55.29	-31.88	10.0	South Georgia Island Region
+2016-08-18T18:09:43	6.0	mww	-55.90	-123.24	10.0	Southern East Pacific Rise
+2016-08-12T03:29:32	6.1	mww	-25.18	-177.34	112.8	South of Fiji Islands
+2016-08-12T01:26:36	7.2	mww	-22.48	173.12	16.4	Southeast of Loyalty Islands
+2016-08-04T16:24:33	6.3	mww	24.94	142.01	510.0	Volcano Islands, Japan Region
+2016-08-04T14:15:12	6.2	mww	-22.33	-66.01	270.0	Jujuy Province, Argentina
+2016-07-29T21:18:24	7.7	mww	18.54	145.51	196.0	Mariana Islands
+2016-07-25T19:38:45	6.4	mww	-2.97	148.03	14.0	Admiralty Islands Region, P.N.G.
+2016-07-25T17:26:50	6.1	mww	-26.11	-70.51	72.0	Near Coast of Northern Chile
+2016-07-20T15:13:16	6.1	mww	-18.93	169.05	167.0	Vanuatu Islands
+2016-07-13T12:11:12	6.3	mww	-28.01	-176.44	12.0	Kermadec Islands Region
+2016-07-11T02:11:04	6.3	mww	0.58	-79.64	21.0	Near Coast of Ecuador
+2016-07-10T13:44:40	6.0	mww	-15.08	-173.20	8.0	Tonga Islands
+2016-06-30T11:30:33	6.0	mww	-16.06	167.47	27.0	Vanuatu Islands
+2016-06-26T11:17:11	6.4	mww	39.48	73.34	13.0	Tajikistan-Xinjiang Border Region
+2016-06-21T17:12:07	6.3	mww	-3.42	151.88	354.0	New Ireland Region, P.N.G.
+2016-06-21T16:26:34	6.1	mww	22.66	-45.14	10.0	Northern Mid Atlantic Ridge
+2016-06-20T03:50:55	6.0	mww	-20.21	168.76	15.0	Loyalty Islands
+2016-06-19T09:47:23	6.3	mww	-20.28	169.07	13.0	Vanuatu Islands
+2016-06-14T13:49:22	6.2	mww	-18.76	168.83	111.0	Vanuatu Islands
+2016-06-10T04:17:44	6.2	mww	-8.68	160.56	30.4	Solomon Islands
+2016-06-10T03:25:22	6.1	mww	12.83	-86.96	10.0	Nicaragua
+2016-06-09T04:13:08	6.1	mww	-11.25	116.27	19.0	South of Sumbawa, Indonesia
+2016-06-07T19:15:15	6.3	mww	1.28	126.37	31.0	Northern Molucca Sea
+2016-06-07T10:51:37	6.3	mww	18.36	-105.17	10.0	Off Coast of Jalisco, Mexico
+2016-06-06T02:35:32	6.1	mww	-30.02	-177.84	43.8	Kermadec Islands, New Zealand
+2016-06-05T16:25:33	6.3	mww	-4.59	125.63	429.6	Banda Sea
+2016-06-01T22:56:00	6.6	mww	-2.10	100.67	50.0	Southern Sumatra, Indonesia
+2016-05-31T05:23:47	6.4	mww	25.56	122.55	246.4	Taiwan Region
+2016-05-28T09:46:59	7.2	mww	-56.24	-26.94	78.0	South Sandwich Islands Region
+2016-05-28T05:38:50	6.9	mww	-21.97	-178.20	405.7	Fiji Islands Region
+2016-05-27T04:08:43	6.4	mww	-20.81	-178.65	567.5	Fiji Islands Region
+2016-05-20T18:14:04	6.0	mww	-25.57	129.88	10.0	Northern Territory, Australia
+2016-05-18T16:46:43	6.9	mww	0.49	-79.62	29.9	Near Coast of Ecuador
+2016-05-18T07:57:02	6.7	mww	0.43	-79.79	16.0	Near Coast of Ecuador
+2016-04-29T01:33:38	6.6	mww	10.28	-103.74	10.0	Northern East Pacific Rise
+2016-04-28T19:33:24	7.0	mww	-16.04	167.38	24.0	Vanuatu Islands
+2016-04-27T12:51:19	6.0	mww	14.52	-93.09	16.0	Near Coast of Chiapas, Mexico
+2016-04-25T07:07:08	6.0	mww	14.48	-93.15	16.0	Near Coast of Chiapas, Mexico
+2016-04-22T03:03:41	6.0	mww	-0.29	-80.50	10.0	Near Coast of Ecuador
+2016-04-20T08:35:10	6.0	mwb	0.71	-80.04	10.0	Near Coast of Ecuador
+2016-04-20T08:33:47	6.2	mww	0.64	-80.21	14.0	Near Coast of Ecuador
+2016-04-19T05:25:39	6.2	mww	-55.73	-27.23	14.0	South Sandwich Islands Region
+2016-04-16T23:58:36	7.8	mww	0.38	-79.92	20.6	Near Coast of Ecuador
+2016-04-15T16:25:06	7.0	mww	32.79	130.75	10.0	Kyushu, Japan
+2016-04-15T14:11:26	6.1	mww	13.40	-92.37	22.4	Off Coast of Chiapas, Mexico
+2016-04-14T21:50:27	6.4	mww	-14.53	166.43	16.0	Vanuatu Islands
+2016-04-14T15:03:47	6.0	mww	32.70	130.72	8.0	Kyushu, Japan
+2016-04-14T12:26:35	6.2	mww	32.79	130.70	9.0	Kyushu, Japan
+2016-04-13T18:21:52	6.0	mww	7.79	122.02	17.0	Mindanao, Philippines
+2016-04-13T13:55:17	6.9	mww	23.09	94.87	136.0	Myanmar-India Border Region
+2016-04-10T10:28:58	6.6	mww	36.47	71.13	212.0	Afghanistan-Tajikistan Border Region
+2016-04-07T03:32:53	6.7	mww	-13.98	166.59	27.6	Vanuatu Islands
+2016-04-06T14:45:29	6.1	mww	-8.20	107.39	29.0	Java, Indonesia
+2016-04-06T06:58:48	6.7	mww	-14.07	166.62	24.0	Vanuatu Islands
+2016-04-03T08:23:52	6.9	mww	-14.32	166.86	26.0	Vanuatu Islands
+2016-04-01T19:24:55	6.2	mww	-3.36	144.89	6.0	Near N. Coast of New Guinea, PNG.
+2016-03-20T22:50:20	6.4	mww	54.29	162.81	30.0	Near East Coast of Kamchatka
+2016-03-19T11:26:33	6.0	mww	18.00	-60.70	26.0	Leeward Islands
+2016-03-19T01:35:12	6.0	mww	51.51	-174.14	17.0	Andreanof Islands, Aleutian Islands
+2016-03-12T18:06:44	6.3	mww	51.56	-173.94	19.0	Andreanof Islands, Aleutian Islands
+2016-03-02T12:49:48	7.8	mww	-4.95	94.33	24.0	Southwest of Sumatra, Indonesia
+2016-02-27T21:29:43	6.1	mww	-51.79	139.60	10.0	Western Indian Antarctic Ridge
+2016-02-22T06:36:59	6.0	mww	-30.42	-72.30	12.0	Off Coast of Central Chile
+2016-02-17T17:26:02	6.0	mww	0.86	129.06	9.0	Halmahera, Indonesia
+2016-02-16T23:48:35	6.1	mww	-55.78	-125.17	13.0	Southern East Pacific Rise
+2016-02-15T15:02:32	6.0	mww	-21.00	-175.48	10.0	Tonga Islands
+2016-02-12T10:02:24	6.3	mww	-9.63	119.40	28.0	Sumba Region, Indonesia
+2016-02-10T00:33:05	6.3	mww	-30.57	-71.58	29.0	Near Coast of Central Chile
+2016-02-08T16:19:12	6.4	mww	-6.62	154.74	29.0	Solomon Islands
+2016-02-05T19:57:27	6.4	mww	22.94	120.60	23.0	Taiwan
+2016-02-01T19:00:46	6.2	mww	-30.75	-179.95	391.0	Kermadec Islands Region
+2016-01-31T17:38:59	6.1	mww	-63.26	169.15	10.0	Balleny Islands Region
+2016-01-30T03:25:12	7.2	mww	53.98	158.55	177.0	Near East Coast of Kamchatka
+2016-01-26T03:10:20	6.1	mww	-5.30	153.25	26.0	New Ireland Region, P.N.G.
+2016-01-25T04:22:02	6.3	mww	35.65	-3.68	12.0	Strait of Gibraltar
+2016-01-24T10:30:30	7.1	mww	59.64	-153.41	129.0	Southern Alaska
+2016-01-21T18:06:57	6.6	mww	18.82	-106.93	10.0	Off Coast of Jalisco, Mexico
+2016-01-14T03:25:33	6.7	mww	41.97	142.78	46.0	Hokkaido, Japan Region
+2016-01-14T03:25:28	6.1	mww	-19.76	-63.33	582.6	Southern Bolivia
+2016-01-11T17:08:03	6.2	mww	44.48	141.09	238.8	Hokkaido, Japan Region
+2016-01-11T16:38:05	6.5	mww	3.90	126.86	13.0	Talaud Islands, Indonesia
+2016-01-05T09:34:14	6.0	mww	-54.29	-136.26	10.0	Pacific Antarctic Ridge
+2016-01-03T23:05:22	6.7	mww	24.80	93.65	55.0	Myanmar-India Border Region
+2016-01-01T02:00:39	6.3	mww	-50.56	139.45	10.0	Western Indian Antarctic Ridge
+2015-12-25T19:14:47	6.3	mww	36.49	71.13	206.0	Afghanistan-Tajikistan Border Region
+2015-12-24T19:44:03	6.2	mww	-55.76	-123.12	12.3	Southern East Pacific Rise
+2015-12-20T18:47:36	6.1	mww	3.65	117.64	14.0	Borneo
+2015-12-19T02:10:53	6.0	mww	-18.38	169.39	10.0	Vanuatu Islands
+2015-12-17T19:49:53	6.6	mww	15.80	-93.63	85.0	Near Coast of Chiapas, Mexico
+2015-12-09T12:58:01	6.1	mww	-16.74	175.25	10.0	Fiji Islands Region
+2015-12-09T10:21:48	6.9	mww	-4.11	129.51	21.0	Banda Sea
+2015-12-07T07:50:05	7.2	mww	38.21	72.78	22.0	Tajikistan
+2015-12-04T22:25:00	7.1	mww	-47.62	85.09	35.0	Southeast Indian Ridge
+2015-11-27T21:00:22	6.2	mww	-24.83	-70.60	34.0	Near Coast of Northern Chile
+2015-11-26T05:45:18	6.7	mww	-9.18	-71.26	602.8	Peru-Brazil Border Region
+2015-11-24T22:50:54	7.6	mww	-10.06	-71.02	620.6	Peru-Brazil Border Region
+2015-11-24T22:45:38	7.6	mww	-10.54	-70.94	606.2	Peru-Brazil Border Region
+2015-11-24T13:21:35	6.0	mww	18.78	145.27	586.9	Mariana Islands
+2015-11-21T09:06:13	6.1	mww	-7.15	129.94	82.0	Banda Sea
+2015-11-18T18:31:04	6.8	mww	-8.90	158.42	12.6	Solomon Islands
+2015-11-17T07:10:07	6.5	mww	38.67	20.60	11.0	Greece
+2015-11-13T20:51:31	6.7	mww	31.00	128.87	12.0	Northwest of Ryukyu Islands
+2015-11-11T02:46:19	6.9	mww	-29.51	-72.06	10.0	Off Coast of Central Chile
+2015-11-11T01:54:38	6.9	mww	-29.51	-72.01	12.0	Off Coast of Central Chile
+2015-11-09T16:03:46	6.5	mww	51.64	-173.07	15.0	Andreanof Islands, Aleutian Islands
+2015-11-08T16:47:02	6.6	mww	6.84	94.65	10.0	Nicobar Islands, India Region
+2015-11-07T07:31:43	6.8	mww	-30.88	-71.45	46.0	Near Coast of Central Chile
+2015-11-07T07:04:31	6.2	mww	-29.46	-72.30	13.0	Off Coast of Central Chile
+2015-11-04T03:44:15	6.5	mww	-8.34	124.88	20.0	Timor Region
+2015-10-26T09:09:42	7.5	mww	36.52	70.37	231.0	Hindu Kush Region, Afghanistan
+2015-10-23T04:04:18	6.0	mww	-45.81	37.17	10.0	Prince Edward Islands Region
+2015-10-23T01:40:06	6.2	mww	-54.23	6.17	11.0	Bouvet Island Region
+2015-10-20T21:52:02	7.1	mww	-14.86	167.30	135.0	Vanuatu Islands
+2015-10-18T16:18:35	6.0	mww	-16.20	-173.26	12.0	Tonga Islands
+2015-10-14T05:43:08	6.0	mww	48.86	156.23	12.0	East of Kuril Islands
+2015-10-11T00:58:27	6.1	mww	-54.49	-135.71	10.0	Pacific Antarctic Ridge
+2015-09-26T02:51:18	6.3	mww	-30.81	-71.32	46.0	Near Coast of Central Chile
+2015-09-24T15:53:27	6.6	mww	-0.62	131.26	18.0	Irian Jaya Region, Indonesia
+2015-09-22T07:13:00	6.0	mww	-31.44	-71.27	58.0	Near Coast of Central Chile
+2015-09-21T17:40:00	6.6	mww	-31.73	-71.38	35.0	Near Coast of Central Chile
+2015-09-21T05:39:34	6.1	mww	-31.58	-71.74	30.0	Near Coast of Central Chile
+2015-09-19T12:52:20	6.2	mww	-32.33	-72.06	18.0	Off Coast of Central Chile
+2015-09-19T05:06:47	6.1	mww	-29.64	-72.08	6.0	Off Coast of Central Chile
+2015-09-18T15:59:42	6.0	mww	15.28	-45.99	10.0	Northern Mid Atlantic Ridge
+2015-09-18T09:10:44	6.2	mww	-32.37	-72.23	8.0	Off Coast of Central Chile
+2015-09-17T04:10:27	6.7	mww	-31.52	-71.80	23.0	Near Coast of Central Chile
+2015-09-17T03:55:15	6.5	mww	-31.42	-71.69	27.0	Near Coast of Central Chile
+2015-09-17T01:41:05	6.4	mww	-31.10	-71.65	42.3	Near Coast of Central Chile
+2015-09-16T23:18:41	7.0	mww	-31.56	-71.43	28.4	Near Coast of Central Chile
+2015-09-16T23:16:09	6.1	mb	-31.60	-71.92	35.0	Near Coast of Central Chile
+2015-09-16T23:03:56	6.1	mwr	-31.75	-71.74	19.1	Near Coast of Central Chile
+2015-09-16T22:59:15	6.4	mb	-31.62	-71.75	26.7	Near Coast of Central Chile
+2015-09-16T22:54:32	8.3	mww	-31.57	-71.67	22.4	Near Coast of Central Chile
+2015-09-16T14:03:22	6.1	mww	-6.01	151.48	6.0	New Britain Region, P.N.G.
+2015-09-16T07:40:58	6.3	mww	1.88	126.43	41.5	Northern Molucca Sea
+2015-09-13T08:14:08	6.7	mww	24.91	-109.62	10.0	Gulf of California
+2015-09-10T10:26:44	6.0	mww	52.10	-169.53	20.0	Fox Islands, Aleutian Islands
+2015-09-07T09:13:56	6.3	mww	-32.82	-177.86	17.0	South of Kermadec Islands
+2015-09-07T08:46:09	6.0	mww	-24.24	179.13	535.0	South of Fiji Islands
+2015-09-01T15:25:09	6.0	mww	31.18	141.60	8.0	Southeast of Honshu, Japan
+2015-08-24T09:41:26	6.0	mww	-30.65	-178.73	228.0	Kermadec Islands, New Zealand
+2015-08-15T07:47:06	6.4	mww	-10.90	163.82	8.0	Solomon Islands
+2015-08-13T10:39:53	6.0	mww	-37.02	78.06	10.0	Mid Indian Ridge
+2015-08-12T18:49:24	6.5	mww	-9.33	157.88	6.4	Solomon Islands
+2015-08-10T04:12:15	6.6	mww	-9.34	158.05	22.0	Solomon Islands
+2015-08-06T23:59:46	6.0	mww	-26.46	-178.25	269.0	South of Fiji Islands
+2015-07-29T02:35:59	6.3	ms	59.89	-153.20	119.3	Southern Alaska
+2015-07-27T21:41:21	7.0	mww	-2.63	138.53	48.0	Irian Jaya, Indonesia
+2015-07-27T04:49:46	6.9	mww	52.38	-169.45	29.0	Fox Islands, Aleutian Islands
+2015-07-18T02:27:33	7.0	mww	-10.40	165.14	11.0	Santa Cruz Islands
+2015-07-16T15:16:33	6.5	mww	13.87	-58.55	20.0	North Atlantic Ocean
+2015-07-10T04:12:42	6.7	mww	-9.31	158.40	12.0	Solomon Islands
+2015-07-07T05:10:28	6.3	mww	43.91	147.97	49.0	Kuril Islands
+2015-07-03T06:43:21	6.1	mww	10.17	125.89	32.0	Leyte, Philippines
+2015-07-03T01:07:47	6.4	mww	37.46	78.15	20.0	Southern Xinjiang, China
+2015-07-01T19:35:21	6.0	mww	-10.99	162.56	12.0	Solomon Islands
+2015-06-30T03:39:29	6.0	mww	-5.45	151.55	43.0	New Britain Region, P.N.G.
+2015-06-25T18:45:57	6.0	mww	-32.07	-178.32	10.0	South of Kermadec Islands
+2015-06-23T12:18:30	6.5	mww	27.74	139.73	460.0	Bonin Islands, Japan Region
+2015-06-21T21:28:16	6.0	mww	-20.43	-178.33	562.6	Fiji Islands Region
+2015-06-20T02:10:07	6.4	mww	-36.36	-73.81	11.0	Near Coast of Central Chile
+2015-06-17T12:51:32	7.0	mww	-35.36	-17.16	10.0	Southern Mid Atlantic Ridge
+2015-06-12T11:07:08	6.0	mww	-15.68	-173.01	48.0	Tonga Islands
+2015-06-10T13:52:09	6.0	mww	-22.40	-68.43	124.0	Northern Chile
+2015-06-08T06:01:08	6.1	mww	41.56	142.03	42.0	Hokkaido, Japan Region
+2015-06-04T23:15:43	6.0	mww	5.99	116.54	10.0	Borneo
+2015-05-30T18:49:07	6.2	mww	30.79	142.97	6.0	Southeast of Honshu, Japan
+2015-05-30T17:18:35	6.0	mwc	-15.72	-173.38	10.0	Tonga Islands
+2015-05-30T11:23:02	7.8	mww	27.84	140.49	664.0	Bonin Islands, Japan Region
+2015-05-29T07:00:09	6.7	ms	56.59	-156.43	72.6	Alaska Peninsula
+2015-05-24T14:38:59	6.2	mww	-19.39	-175.96	10.0	Tonga Islands
+2015-05-24T04:53:23	6.3	mww	-16.86	-14.17	10.0	Southern Mid Atlantic Ridge
+2015-05-22T23:59:33	6.8	mww	-11.11	163.22	10.0	Solomon Islands
+2015-05-22T21:45:19	6.9	mww	-11.06	163.70	11.2	Solomon Islands
+2015-05-20T22:48:53	6.8	mww	-10.88	164.17	11.0	Santa Cruz Islands Region
+2015-05-20T00:30:54	6.0	mww	-19.30	-175.52	203.0	Tonga Islands
+2015-05-19T15:25:21	6.7	mww	-54.33	-132.16	7.2	Pacific Antarctic Ridge
+2015-05-15T20:26:56	6.0	mww	-2.54	102.22	151.0	Southern Sumatra, Indonesia
+2015-05-12T21:12:58	6.8	mww	38.91	142.03	35.0	Near East Coast of Honshu, Japan
+2015-05-12T07:36:54	6.3	mww	27.63	86.16	15.0	Nepal
+2015-05-12T07:05:19	7.3	mww	27.81	86.07	15.0	Nepal
+2015-05-10T21:25:46	6.0	mww	31.24	142.02	6.0	Southeast of Honshu, Japan
+2015-05-07T07:10:19	7.1	mww	-7.22	154.56	10.0	Solomon Islands
+2015-05-05T01:44:06	7.5	mww	-5.46	151.88	55.0	New Britain Region, P.N.G.
+2015-05-03T22:32:39	6.0	mww	-5.63	151.68	24.0	New Britain Region, P.N.G.
+2015-05-01T08:06:52	6.0	mb	-5.49	151.87	35.0	New Britain Region, P.N.G.
+2015-05-01T08:06:03	6.8	mww	-5.20	151.78	44.0	New Britain Region, P.N.G.
+2015-04-30T10:45:02	6.7	mww	-5.38	151.77	31.0	New Britain Region, P.N.G.
+2015-04-28T16:39:39	6.1	mww	-20.89	-178.63	581.0	Fiji Islands Region
+2015-04-26T07:09:10	6.7	mww	27.77	86.02	22.9	Nepal
+2015-04-25T06:45:21	6.6	mww	28.22	84.82	10.0	Nepal
+2015-04-25T06:15:22	6.1	mb	27.63	85.54	10.0	Nepal
+2015-04-25T06:11:25	7.8	mww	28.23	84.73	8.2	Nepal
+2015-04-24T13:56:15	6.2	mww	51.61	-130.77	8.0	Queen Charlotte Islands Region
+2015-04-24T03:36:42	6.1	mww	-42.06	173.01	48.0	South Island, New Zealand
+2015-04-22T22:57:15	6.2	mww	-12.04	166.43	72.0	Santa Cruz Islands
+2015-04-20T12:00:00	6.1	mww	24.05	122.45	29.0	Taiwan Region
+2015-04-20T11:45:13	6.0	mww	24.09	122.45	29.0	Taiwan Region
+2015-04-20T01:42:58	6.4	mww	24.20	122.32	29.0	Taiwan Region
+2015-04-17T15:52:51	6.5	mww	-15.88	-178.60	10.0	Fiji Islands Region
+2015-04-16T18:07:43	6.0	mww	35.19	26.82	20.0	Crete, Greece
+2015-04-07T00:46:21	6.3	mww	-15.17	-173.22	30.0	Tonga Islands
+2015-03-31T12:18:24	6.0	mww	-4.89	152.49	39.0	New Britain Region, P.N.G.
+2015-03-30T08:48:25	6.5	mww	-15.50	-173.03	11.0	Tonga Islands
+2015-03-30T08:18:01	6.4	mww	-15.39	-172.94	14.5	Samoa Islands Region
+2015-03-30T07:56:53	6.0	mww	-15.43	-173.05	10.0	Tonga Islands
+2015-03-29T23:48:31	7.5	mww	-4.73	152.56	41.0	New Britain Region, P.N.G.
+2015-03-23T04:51:38	6.4	mww	-18.35	-69.17	130.0	Northern Chile
+2015-03-18T18:27:29	6.2	mww	-36.12	-73.52	13.0	Near Coast of Central Chile
+2015-03-17T22:12:28	6.2	mww	1.67	126.52	44.0	Northern Molucca Sea
+2015-03-15T23:17:16	6.1	mww	-0.54	122.31	31.0	Minahassa Peninsula, Sulawesi
+2015-03-10T20:55:44	6.2	mww	6.78	-72.99	155.0	Northern Colombia
+2015-03-06T08:22:18	6.0	mww	-41.32	80.60	10.0	Mid Indian Ridge
+2015-03-03T10:37:30	6.1	mww	-0.78	98.72	28.0	Southern Sumatra, Indonesia
+2015-02-27T13:45:05	7.0	mww	-7.30	122.53	552.1	Flores Sea
+2015-02-22T14:23:12	6.2	mww	18.68	-106.85	5.0	Off Coast of Jalisco, Mexico
+2015-02-21T10:13:53	6.0	mww	39.82	143.49	7.0	Off East Coast of Honshu, Japan
+2015-02-20T04:25:23	6.2	mww	39.82	143.59	10.0	Off East Coast of Honshu, Japan
+2015-02-19T13:18:32	6.4	mww	-16.43	168.15	10.0	Vanuatu Islands
+2015-02-18T09:32:26	6.1	mww	-10.76	164.12	10.0	Santa Cruz Islands Region
+2015-02-16T23:06:28	6.7	mww	39.86	142.88	23.0	Near East Coast of Honshu, Japan
+2015-02-16T22:00:53	6.2	mww	-55.52	-28.26	13.0	South Sandwich Islands Region
+2015-02-13T20:06:32	6.2	mww	22.64	121.43	30.0	Taiwan Region
+2015-02-13T18:59:12	7.1	mww	52.65	-31.90	16.7	Northern Mid Atlantic Ridge
+2015-02-11T18:57:22	6.7	mww	-23.11	-66.69	223.0	Jujuy Province, Argentina
+2015-02-02T10:49:48	6.3	mww	-32.72	-67.12	172.0	Mendoza Province, Argentina
+2015-01-30T17:57:56	6.0	mww	-21.25	170.16	7.1	Southeast of Loyalty Islands
+2015-01-28T02:43:19	6.2	mww	-20.97	-178.30	484.1	Fiji Islands Region
+2015-01-23T03:47:27	6.8	mww	-17.03	168.52	220.0	Vanuatu Islands
+2015-01-07T05:07:07	6.5	mww	5.90	-82.66	8.0	South of Panama
+2014-12-30T21:17:23	6.0	mww	-20.33	-178.56	599.3	Fiji Islands Region
+2014-12-29T09:29:37	6.1	mww	8.63	121.52	8.0	Mindanao, Philippines
+2014-12-21T11:34:13	6.3	mww	2.09	126.65	41.0	Northern Molucca Sea
+2014-12-10T21:03:39	6.1	mww	25.54	122.45	256.0	Taiwan Region
+2014-12-08T08:54:52	6.6	mww	7.94	-82.69	20.0	South of Panama
+2014-12-07T21:16:35	6.1	mww	13.67	-91.47	32.0	Near Coast of Guatemala
+2014-12-07T01:22:02	6.6	mww	-6.51	154.46	23.0	Solomon Islands
+2014-12-06T22:05:10	6.0	mww	-6.11	130.48	116.0	Banda Sea
+2014-12-06T17:21:49	6.0	mww	7.98	-82.73	15.0	South of Panama
+2014-12-02T05:11:31	6.6	mww	6.16	123.13	614.0	Mindanao, Philippines
+2014-11-26T14:33:43	6.8	mww	1.96	126.58	39.0	Northern Molucca Sea
+2014-11-22T13:08:18	6.2	mww	36.64	137.89	9.0	Eastern Honshu, Japan
+2014-11-21T10:10:19	6.5	mww	2.30	127.06	35.0	Northern Molucca Sea
+2014-11-17T16:52:46	6.1	mww	-46.35	33.80	10.0	Prince Edward Islands Region
+2014-11-16T22:33:20	6.7	mww	-37.65	179.66	22.0	Off E. Coast of N. Island, N.Z.
+2014-11-15T02:31:41	7.1	mww	1.89	126.52	45.0	Northern Molucca Sea
+2014-11-13T10:24:18	6.0	mww	-15.22	173.08	10.0	Fiji Islands Region
+2014-11-07T03:33:55	6.6	mww	-5.99	148.23	53.2	New Britain Region, P.N.G.
+2014-11-03T08:48:29	6.3	mww	-41.73	79.96	10.0	Mid Indian Ridge
+2014-11-02T17:17:04	6.0	mww	-61.22	154.28	10.0	Balleny Islands Region
+2014-11-01T18:57:22	7.1	mww	-19.69	-177.76	434.0	Fiji Islands Region
+2014-11-01T10:59:54	6.0	mww	-31.85	-111.24	10.0	Easter Island Region
+2014-10-28T03:15:37	6.0	mww	-15.30	-174.68	8.0	Tonga Islands
+2014-10-14T03:51:34	7.3	mww	12.53	-88.12	40.0	Off Coast of Central America
+2014-10-11T02:35:47	6.1	mww	41.03	143.16	22.0	Hokkaido, Japan Region
+2014-10-09T02:32:05	6.6	mww	-32.10	-110.86	10.0	Southern East Pacific Rise
+2014-10-09T02:14:31	7.0	mww	-32.11	-110.81	16.5	Southern East Pacific Rise
+2014-10-08T02:40:53	6.1	mww	23.84	-108.33	10.0	Gulf of California
+2014-10-07T13:49:39	6.1	mww	23.38	100.47	8.5	Yunnan, China
+2014-10-01T03:38:51	6.0	mww	-6.07	149.53	42.0	New Britain Region, P.N.G.
+2014-09-25T17:51:17	6.2	ml	61.94	-151.82	108.9	Southern Alaska
+2014-09-25T09:13:50	6.1	mww	-9.46	156.41	4.0	Solomon Islands
+2014-09-24T11:16:15	6.2	mww	-23.80	-66.63	224.0	Jujuy Province, Argentina
+2014-09-17T06:14:45	6.7	mww	13.76	144.43	130.0	Mariana Islands
+2014-09-10T02:46:06	6.2	mww	-0.24	125.10	35.0	Southern Molucca Sea
+2014-09-06T19:22:59	6.2	mww	18.75	-107.05	17.0	Off Coast of Jalisco, Mexico
+2014-09-06T06:53:11	6.1	mww	-26.65	-114.50	7.0	Easter Island Region
+2014-09-04T05:33:50	6.0	mww	-21.39	-173.32	35.0	Tonga Islands
+2014-08-24T23:21:45	6.8	mww	-14.60	-73.57	101.0	Central Peru
+2014-08-24T10:20:44	6.0	mw	38.22	-122.31	11.1	Northern California
+2014-08-23T22:32:23	6.4	mww	-32.70	-71.44	32.0	Near Coast of Central Chile
+2014-08-18T18:08:22	6.0	mww	32.58	47.70	5.0	Iran-Iraq Border Region
+2014-08-18T02:32:05	6.2	mww	32.70	47.70	10.2	Iran-Iraq Border Region
+2014-08-10T03:43:17	6.1	mww	41.16	142.13	41.0	Hokkaido, Japan Region
+2014-08-06T11:45:22	6.2	mww	-7.27	128.04	10.0	Banda Sea
+2014-08-03T08:30:13	6.2	mww	27.19	103.41	12.0	Yunnan, China
+2014-08-03T00:22:03	6.9	mww	0.83	146.17	13.0	E. Caroline Islands, Micronesia
+2014-07-29T13:27:40	6.0	mww	-3.42	146.77	9.8	Bismarck Sea
+2014-07-29T10:46:14	6.3	mww	17.68	-95.65	107.0	Oaxaca, Mexico
+2014-07-27T01:28:37	6.0	mww	23.72	-45.58	10.0	Northern Mid Atlantic Ridge
+2014-07-25T10:54:49	6.1	mww	58.31	-136.96	10.0	Southeastern Alaska
+2014-07-21T14:54:41	6.9	mww	-19.80	-178.40	615.4	Fiji Islands Region
+2014-07-20T18:32:47	6.2	mww	44.64	148.78	61.0	Kuril Islands
+2014-07-19T14:14:01	6.0	mww	11.74	57.64	10.0	Owen Fracture Zone Region
+2014-07-19T12:27:10	6.2	mww	-15.82	-174.45	227.3	Tonga Islands
+2014-07-17T11:49:33	6.0	mb	60.35	-140.33	10.0	Southeastern Alaska
+2014-07-14T07:59:57	6.3	mww	5.71	126.48	20.0	Mindanao, Philippines
+2014-07-11T19:22:00	6.5	mww	37.01	142.45	20.0	Off East Coast of Honshu, Japan
+2014-07-08T12:56:25	6.2	mww	-17.69	168.40	110.2	Vanuatu Islands
+2014-07-07T11:23:54	6.9	mww	14.72	-92.46	53.0	Near Coast of Chiapas, Mexico
+2014-07-05T09:39:27	6.0	mww	1.93	96.94	20.0	Off West Coast of Northern Sumatra
+2014-07-04T15:00:27	6.5	mww	-6.23	152.81	20.0	New Britain Region, P.N.G.
+2014-07-03T19:50:07	6.3	mww	-30.46	-176.45	35.0	Kermadec Islands Region
+2014-07-02T05:53:29	6.0	mww	-62.30	155.19	10.0	Balleny Islands Region
+2014-06-30T19:55:32	6.2	mww	28.34	138.84	511.0	Bonin Islands, Japan Region
+2014-06-29T17:15:09	6.7	mww	-14.98	-175.51	18.0	Samoa Islands Region
+2014-06-29T15:52:23	6.4	mww	-14.78	-175.26	9.0	Samoa Islands Region
+2014-06-29T14:32:49	6.0	mwb	-55.36	-28.11	10.0	South Sandwich Islands Region
+2014-06-29T07:52:55	6.9	mww	-55.47	-28.37	8.0	South Sandwich Islands Region
+2014-06-29T05:56:31	6.2	mww	24.39	142.63	48.0	Volcano Islands, Japan Region
+2014-06-24T03:15:35	6.3	mwb	52.20	176.70	4.0	Rat Islands, Aleutian Islands
+2014-06-23T22:29:51	6.0	mb	51.96	178.58	106.6	Rat Islands, Aleutian Islands
+2014-06-23T21:30:46	6.0	mb	51.94	178.43	101.9	Rat Islands, Aleutian Islands
+2014-06-23T21:11:40	6.0	mb	51.96	178.46	102.8	Rat Islands, Aleutian Islands
+2014-06-23T20:53:09	7.9	mww	51.85	178.74	109.0	Rat Islands, Aleutian Islands
+2014-06-23T20:06:20	6.7	mwc	-29.94	-177.61	26.6	Kermadec Islands, New Zealand
+2014-06-23T19:21:45	6.5	mwc	-29.94	-177.52	10.0	Kermadec Islands, New Zealand
+2014-06-23T19:19:15	6.9	mww	-29.98	-177.72	20.0	Kermadec Islands, New Zealand
+2014-06-19T10:17:55	6.2	mww	-13.56	166.83	36.0	Vanuatu Islands
+2014-06-14T11:10:59	6.5	mww	-10.12	91.09	4.0	South Indian Ocean
+2014-05-31T11:53:46	6.2	mww	18.79	-107.47	5.0	Off Coast of Jalisco, Mexico
+2014-05-24T09:25:02	6.9	mww	40.29	25.39	6.4	Aegean Sea
+2014-05-21T16:21:54	6.0	mww	18.20	88.04	47.2	Bay of Bengal
+2014-05-18T01:02:32	6.0	mww	4.25	92.76	35.0	Off West Coast of Northern Sumatra
+2014-05-15T10:16:42	6.3	mww	9.38	122.06	15.5	Negros, Philippines
+2014-05-15T08:16:34	6.3	mww	6.43	144.94	11.0	E. Caroline Islands, Micronesia
+2014-05-14T20:56:13	6.1	mww	6.45	144.92	10.0	E. Caroline Islands, Micronesia
+2014-05-13T06:35:24	6.5	mww	7.21	-82.30	10.0	South of Panama
+2014-05-12T18:38:36	6.5	mww	-49.94	-114.80	10.5	Southern East Pacific Rise
+2014-05-10T07:36:01	6.0	mww	17.22	-100.81	23.0	Guerrero, Mexico
+2014-05-08T17:00:14	6.4	mww	17.23	-100.75	17.1	Guerrero, Mexico
+2014-05-07T04:20:33	6.0	mww	-6.96	154.90	10.0	Solomon Islands
+2014-05-06T20:52:28	6.3	mww	-36.17	-97.05	16.8	West Chile Rise
+2014-05-05T11:08:43	6.1	mww	19.66	99.67	6.0	Thailand
+2014-05-04T20:18:24	6.0	mww	34.91	139.42	153.0	Near S. Coast of Honshu, Japan
+2014-05-04T09:25:15	6.3	mww	-25.81	178.24	634.2	South of Fiji Islands
+2014-05-04T09:15:52	6.6	mww	-24.61	179.09	527.0	South of Fiji Islands
+2014-05-01T06:36:35	6.6	mww	-21.45	170.35	106.0	Southeast of Loyalty Islands
+2014-04-26T06:02:21	6.1	mww	-20.75	-174.71	45.0	Tonga Islands
+2014-04-24T03:10:10	6.5	mww	49.64	-127.73	10.0	Vancouver Island, Canada Region
+2014-04-20T00:15:58	6.2	mww	-7.16	155.34	20.0	Solomon Islands
+2014-04-19T13:28:00	7.5	mww	-6.75	155.02	43.4	Solomon Islands
+2014-04-19T01:04:03	6.6	mww	-6.66	155.09	29.0	Solomon Islands
+2014-04-18T14:27:24	7.2	mww	17.40	-100.97	24.0	Guerrero, Mexico
+2014-04-18T04:13:12	6.1	mww	-11.14	164.81	10.0	Santa Cruz Islands Region
+2014-04-17T15:06:51	6.2	mww	-62.87	155.74	20.6	Balleny Islands Region
+2014-04-15T03:57:01	6.8	mww	-53.50	8.72	11.2	Bouvet Island Region
+2014-04-13T13:24:59	6.6	mww	-11.13	162.05	10.0	Solomon Islands
+2014-04-13T12:36:19	7.4	mww	-11.46	162.05	39.0	Solomon Islands
+2014-04-12T20:14:39	7.6	mww	-11.27	162.15	22.6	Solomon Islands
+2014-04-12T05:24:23	6.1	mww	-7.10	155.24	20.0	Solomon Islands
+2014-04-11T20:29:12	6.6	mww	11.64	-85.88	135.0	Nicaragua
+2014-04-11T08:16:45	6.5	mww	-6.79	154.95	20.0	Solomon Islands
+2014-04-11T07:07:23	7.1	mww	-6.59	155.05	60.5	Solomon Islands
+2014-04-11T00:01:45	6.2	mww	-20.66	-70.65	13.8	Near Coast of Northern Chile
+2014-04-10T23:27:45	6.1	mww	12.40	-86.38	13.0	Nicaragua
+2014-04-04T11:40:32	6.0	mww	-10.54	161.70	57.0	Solomon Islands
+2014-04-04T01:37:50	6.3	mww	-20.64	-70.65	13.7	Near Coast of Northern Chile
+2014-04-03T05:26:15	6.4	mww	-20.80	-70.59	25.0	Near Coast of Northern Chile
+2014-04-03T02:43:13	7.7	mww	-20.57	-70.49	22.4	Near Coast of Northern Chile
+2014-04-03T01:58:30	6.5	mww	-20.31	-70.58	24.1	Near Coast of Northern Chile
+2014-04-02T16:13:26	6.0	mww	7.94	-82.34	25.0	South of Panama
+2014-04-01T23:57:58	6.9	mww	-19.89	-70.95	28.4	Near Coast of Northern Chile
+2014-04-01T23:46:47	8.2	mww	-19.61	-70.77	25.0	Near Coast of Northern Chile
+2014-03-27T03:49:42	6.0	mww	-12.10	166.59	98.0	Santa Cruz Islands
+2014-03-26T03:29:35	6.3	mww	-26.17	179.29	495.0	South of Fiji Islands
+2014-03-23T18:20:01	6.3	mww	-19.69	-70.85	21.0	Near Coast of Northern Chile
+2014-03-22T12:59:59	6.2	mww	-19.76	-70.87	20.0	Near Coast of Northern Chile
+2014-03-21T13:41:09	6.4	mww	7.74	94.33	21.5	Nicobar Islands, India Region
+2014-03-17T05:11:34	6.4	mww	-20.02	-70.88	21.0	Near Coast of Northern Chile
+2014-03-16T21:16:29	6.7	mww	-19.98	-70.70	20.0	Near Coast of Northern Chile
+2014-03-15T23:51:32	6.3	mww	-5.57	-80.97	29.0	Near Coast of Northern Peru
+2014-03-15T08:59:21	6.1	mww	-14.08	-76.31	20.0	Near Coast of Peru
+2014-03-13T17:06:50	6.3	mww	33.68	131.82	79.0	Kyushu, Japan
+2014-03-11T22:03:09	6.1	mww	-3.09	148.55	7.0	Bismarck Sea
+2014-03-11T02:44:05	6.4	mww	-60.86	-19.98	10.0	East of South Sandwich Islands
+2014-03-10T05:18:13	6.8	mw	40.83	-125.13	16.4	Off Coast of N. California
+2014-03-05T09:56:57	6.3	mww	-14.74	169.82	638.0	Vanuatu Islands
+2014-03-02T22:17:14	6.0	mww	14.18	-93.15	18.5	Near Coast of Chiapas, Mexico
+2014-03-02T20:11:23	6.5	mww	27.43	127.37	119.0	Ryukyu Islands, Japan
+2014-03-02T09:37:54	6.2	mww	12.56	-87.69	60.0	Near Coast of Nicaragua
+2014-02-26T21:13:40	6.1	mww	53.60	-171.82	265.0	Fox Islands, Aleutian Islands
+2014-02-18T09:27:13	6.5	mww	14.67	-58.93	14.8	North Atlantic Ocean
+2014-02-12T09:19:49	6.9	mww	35.91	82.59	10.0	Xizang
+2014-02-09T14:56:39	6.0	mww	-5.97	154.44	41.8	Solomon Islands
+2014-02-07T08:40:13	6.5	mww	-15.07	167.37	122.0	Vanuatu Islands
+2014-02-03T03:08:46	6.0	mww	38.26	20.39	5.0	Greece
+2014-02-02T09:26:37	6.5	mww	-32.91	-177.88	44.3	South of Kermadec Islands
+2014-02-01T03:58:43	6.1	mww	-56.83	-27.34	130.0	South Sandwich Islands Region
+2014-01-26T13:55:42	6.1	mww	38.21	20.45	8.0	Greece
+2014-01-25T05:14:18	6.1	mww	-7.99	109.27	66.0	Java, Indonesia
+2014-01-21T01:29:07	6.1	mww	-15.14	-174.68	6.1	Tonga Islands
+2014-01-20T02:52:44	6.1	mww	-40.66	175.81	28.0	North Island, New Zealand
+2014-01-13T04:01:03	6.4	mww	19.04	-66.81	20.0	Puerto Rico Region
+2014-01-01T16:03:29	6.5	mww	-13.86	167.25	187.0	Vanuatu Islands
+2013-12-17T23:38:06	6.2	mww	20.77	146.79	9.0	Mariana Islands Region
+2013-12-08T17:24:54	6.0	mww	44.44	149.17	28.0	Kuril Islands
+2013-12-01T06:29:57	6.0	mww	2.04	96.83	20.0	Northern Sumatra, Indonesia
+2013-12-01T01:24:13	6.4	mww	-7.03	128.38	9.9	Banda Sea
+2013-11-25T07:21:18	6.0	mwc	-53.87	-53.91	14.8	South Atlantic Ocean
+2013-11-25T06:27:33	7.0	mww	-53.95	-55.00	11.8	Falkland Islands Region
+2013-11-25T05:56:50	6.0	mww	45.56	151.00	34.0	Kuril Islands
+2013-11-23T07:48:32	6.5	mww	-17.12	-176.54	371.0	Fiji Islands Region
+2013-11-19T17:00:44	6.0	mww	18.48	145.20	511.0	Mariana Islands
+2013-11-19T13:32:51	6.0	mww	2.64	128.43	38.0	Halmahera, Indonesia
+2013-11-17T09:04:55	7.7	mww	-60.27	-46.40	10.0	Scotia Sea
+2013-11-16T03:34:31	6.9	mww	-60.26	-47.06	10.0	Scotia Sea
+2013-11-13T23:45:47	6.1	mww	-60.28	-47.12	11.1	Scotia Sea
+2013-11-12T07:03:51	6.4	mww	54.69	162.30	43.0	Near East Coast of Kamchatka
+2013-11-02T18:53:46	6.2	mww	-19.17	-172.64	10.1	Tonga Islands Region
+2013-11-02T15:52:46	6.0	mww	-23.64	-112.60	10.0	Easter Island Region
+2013-10-31T23:03:59	6.6	mww	-30.29	-71.52	27.0	Near Coast of Central Chile
+2013-10-31T12:02:08	6.3	mww	23.59	121.44	10.0	Taiwan
+2013-10-30T02:51:47	6.2	mww	-35.31	-73.39	41.5	Off Coast of Central Chile
+2013-10-25T17:10:19	7.1	mww	37.16	144.66	35.0	Off East Coast of Honshu, Japan
+2013-10-24T19:25:10	6.7	mww	-58.15	-12.80	22.9	East of South Sandwich Islands
+2013-10-23T08:23:30	6.0	mwb	-23.01	-177.14	160.0	South of Fiji Islands
+2013-10-19T17:54:54	6.6	mww	26.09	-110.32	9.4	Gulf of California
+2013-10-16T10:30:58	6.8	mww	-6.45	154.93	35.0	Solomon Islands
+2013-10-15T00:12:32	7.1	mww	9.88	124.12	19.0	Mindanao, Philippines
+2013-10-12T13:11:53	6.6	mww	35.51	23.25	40.0	Crete, Greece
+2013-10-12T02:10:27	6.0	mww	10.90	-62.31	63.0	Near Coast of Venezuela
+2013-10-11T21:25:00	6.2	mww	-30.66	-178.48	151.0	Kermadec Islands, New Zealand
+2013-10-06T21:33:19	6.2	mww	-36.73	-97.48	10.3	West Chile Rise
+2013-10-06T16:38:08	6.0	mww	12.31	141.69	104.0	South of Mariana Islands
+2013-10-04T17:26:13	6.4	mww	-38.61	78.37	12.7	Mid Indian Ridge
+2013-10-01T03:38:21	6.7	mww	53.20	152.79	573.0	Sea of Okhotsk
+2013-09-30T05:55:55	6.5	mww	-30.93	-178.32	41.5	Kermadec Islands, New Zealand
+2013-09-28T07:34:06	6.8	mww	27.18	65.51	12.0	Pakistan
+2013-09-25T16:42:43	7.1	mww	-15.84	-74.51	40.0	Near Coast of Peru
+2013-09-25T06:51:24	6.1	mww	-49.96	-113.74	10.0	Southern East Pacific Rise
+2013-09-24T11:29:47	7.7	mww	26.95	65.50	15.0	Pakistan
+2013-09-21T01:39:15	6.1	mww	-7.33	120.01	549.9	Flores Sea
+2013-09-15T16:21:37	6.1	mww	51.58	-174.72	24.0	Andreanof Islands, Aleutian Islands
+2013-09-11T12:44:13	6.1	mww	-4.55	-104.58	10.5	Central East Pacific Rise
+2013-09-07T00:13:29	6.4	mww	14.61	-92.12	66.0	Near Coast of Chiapas, Mexico
+2013-09-05T04:01:36	6.0	mww	15.18	-45.23	10.0	Northern Mid Atlantic Ridge
+2013-09-04T06:27:03	6.0	mww	51.57	-174.85	17.0	Andreanof Islands, Aleutian Islands
+2013-09-04T02:32:30	6.5	mww	51.56	-174.77	20.0	Andreanof Islands, Aleutian Islands
+2013-09-04T00:23:11	6.0	mww	51.18	-130.22	9.9	Queen Charlotte Islands Region
+2013-09-04T00:18:23	6.5	mww	29.94	138.83	402.0	Southeast of Honshu, Japan
+2013-09-03T20:19:06	6.1	mww	51.24	-130.40	2.7	Queen Charlotte Islands Region
+2013-09-01T11:52:29	6.5	mww	-7.44	128.22	112.0	Banda Sea
+2013-08-31T06:38:36	6.0	mww	51.24	-174.94	18.0	Andreanof Islands, Aleutian Islands
+2013-08-30T16:25:02	7.0	mww	51.54	-175.23	29.0	Andreanof Islands, Aleutian Islands
+2013-08-28T02:54:41	6.2	mww	-27.78	179.63	478.0	Kermadec Islands Region
+2013-08-21T12:38:29	6.2	mww	16.88	-99.50	21.0	Near Coast of Guerrero, Mexico
+2013-08-17T16:32:31	6.1	mww	-34.89	54.09	10.0	Southwest Indian Ridge
+2013-08-16T02:31:05	6.5	mww	-41.73	174.15	8.2	Cook Strait, New Zealand
+2013-08-13T15:43:15	6.7	mww	5.77	-78.20	12.0	South of Panama
+2013-08-12T09:49:32	6.2	mww	-5.40	-81.93	10.0	Near Coast of Northern Peru
+2013-08-12T04:16:47	6.1	mww	-30.63	-179.68	340.6	Kermadec Islands Region
+2013-08-12T00:53:43	6.0	mww	-7.14	129.81	95.0	Banda Sea
+2013-08-01T20:01:43	6.0	mww	-15.24	-173.50	31.6	Tonga Islands
+2013-07-26T21:32:59	6.3	mww	-57.91	-23.84	13.0	South Sandwich Islands Region
+2013-07-26T07:07:15	6.1	mww	-15.38	167.69	124.0	Vanuatu Islands
+2013-07-22T07:01:42	6.3	mww	-46.05	34.78	10.0	Prince Edward Islands Region
+2013-07-21T05:09:31	6.5	mww	-41.70	174.34	17.0	Cook Strait, New Zealand
+2013-07-17T02:37:43	6.0	mww	-15.66	-71.74	7.0	Southern Peru
+2013-07-15T14:03:39	7.3	mww	-60.86	-25.07	11.0	South Sandwich Islands Region
+2013-07-07T20:30:06	6.6	mww	-6.03	149.71	56.0	New Britain Region, P.N.G.
+2013-07-07T18:35:30	7.3	mww	-3.92	153.93	385.5	New Ireland Region, P.N.G.
+2013-07-06T05:05:06	6.0	mww	-3.27	100.56	21.0	Southern Sumatra, Indonesia
+2013-07-04T17:15:54	6.1	mww	-7.03	155.73	29.0	Solomon Islands
+2013-07-02T07:37:02	6.1	mww	4.64	96.67	13.0	Northern Sumatra, Indonesia
+2013-06-24T22:04:13	6.6	mww	10.70	-42.59	10.0	Northern Mid Atlantic Ridge
+2013-06-16T21:39:05	6.0	mww	34.35	25.16	19.0	Crete, Greece
+2013-06-15T17:34:27	6.5	mww	11.76	-86.93	30.0	Near Coast of Nicaragua
+2013-06-15T16:11:02	6.2	mww	34.40	25.02	10.0	Crete, Greece
+2013-06-15T11:20:36	6.0	mww	-33.85	179.40	195.0	South of Kermadec Islands
+2013-06-13T16:47:23	6.7	mww	-10.00	107.24	9.0	South of Java, Indonesia
+2013-06-05T04:47:26	6.1	mww	-11.40	166.30	39.0	Santa Cruz Islands
+2013-06-02T05:43:03	6.2	mww	23.79	121.14	17.0	Taiwan
+2013-05-24T14:56:31	6.7	mwb	52.23	151.44	624.0	Sea of Okhotsk
+2013-05-24T05:44:48	8.3	mww	54.89	153.22	598.1	Sea of Okhotsk
+2013-05-23T21:07:46	6.3	mww	-20.58	-175.76	150.0	Tonga Islands
+2013-05-23T17:19:04	7.4	mww	-23.01	-177.23	173.7	South of Fiji Islands
+2013-05-21T05:43:21	6.1	mww	52.28	160.07	30.0	Off East Coast of Kamchatka
+2013-05-21T01:55:08	6.0	mww	52.52	160.36	30.0	Off East Coast of Kamchatka
+2013-05-20T09:49:04	6.4	mww	-44.87	-80.75	10.0	Off Coast of Southern Chile
+2013-05-19T18:44:10	6.1	mww	52.34	160.06	18.0	Off East Coast of Kamchatka
+2013-05-18T05:47:59	6.0	mww	37.74	141.47	39.0	Near East Coast of Honshu, Japan
+2013-05-14T00:32:25	6.8	mww	18.73	145.29	602.2	Mariana Islands
+2013-05-11T20:46:57	6.4	mww	-17.96	-175.11	212.9	Tonga Islands
+2013-05-11T02:08:08	6.1	mww	26.56	57.77	15.0	Southern Iran
+2013-05-07T10:10:48	6.0	mww	-19.62	175.05	11.0	South of Fiji Islands
+2013-04-26T06:53:28	6.1	mww	-28.68	-178.92	351.0	Kermadec Islands Region
+2013-04-23T23:14:40	6.5	mww	-3.90	152.13	10.0	New Ireland Region, P.N.G.
+2013-04-22T01:16:32	6.0	mww	18.08	-102.18	30.0	Michoacan, Mexico
+2013-04-21T03:22:16	6.1	mww	29.93	138.89	421.9	Southeast of Honshu, Japan
+2013-04-20T13:12:50	6.1	mww	50.10	157.15	18.0	Kuril Islands
+2013-04-20T00:02:47	6.6	mww	30.31	102.89	14.0	Sichuan, China
+2013-04-19T19:58:40	6.1	mww	49.97	157.65	15.0	East of Kuril Islands
+2013-04-19T03:05:52	7.2	mww	46.22	150.79	110.0	Kuril Islands
+2013-04-16T22:55:26	6.6	mww	-3.21	142.54	13.0	Near N. Coast of New Guinea, PNG.
+2013-04-16T10:44:20	7.7	mww	28.03	62.00	80.0	Southern Iran
+2013-04-14T01:32:22	6.6	mww	-6.47	154.61	31.0	Solomon Islands
+2013-04-13T22:49:50	6.0	mww	-19.14	169.53	280.2	Vanuatu Islands
+2013-04-09T11:52:49	6.4	mww	28.43	51.59	12.0	Southern Iran
+2013-04-06T04:42:35	7.0	mww	-3.52	138.48	66.0	Irian Jaya, Indonesia
+2013-04-05T13:00:02	6.3	mww	42.74	131.00	563.3	E Russia-NE China Border Region
+2013-04-01T18:53:17	6.0	mww	39.53	143.17	14.0	Off East Coast of Honshu, Japan
+2013-03-25T23:02:12	6.2	mww	14.49	-90.46	189.0	Guatemala
+2013-03-24T08:13:45	6.1	mww	-20.76	173.37	10.0	Vanuatu Islands Region
+2013-03-10T22:51:50	6.5	mww	-6.60	148.17	28.0	New Britain Region, P.N.G.
+2013-03-01T13:20:49	6.5	mww	50.96	157.41	29.0	Kuril Islands
+2013-03-01T12:53:51	6.4	mww	50.90	157.45	33.0	Kuril Islands
+2013-02-28T14:05:50	6.9	mww	50.95	157.28	41.0	Kuril Islands
+2013-02-22T12:01:58	6.1	mww	-27.93	-63.10	575.2	Santiago Del Estero Prov., Argentina
+2013-02-16T04:37:36	6.1	mww	5.81	125.75	105.0	Mindanao, Philippines
+2013-02-14T13:13:53	6.6	mww	67.63	142.51	11.0	Eastern Siberia, Russia
+2013-02-10T18:39:32	6.0	mww	-10.94	165.46	11.0	Santa Cruz Islands
+2013-02-09T21:02:22	6.6	mww	-10.99	165.74	18.0	Santa Cruz Islands
+2013-02-09T14:16:07	6.9	mww	1.14	-77.39	145.0	Colombia
+2013-02-08T15:26:38	7.1	mww	-10.93	166.02	21.0	Santa Cruz Islands
+2013-02-08T11:12:11	6.8	mww	-10.84	165.97	12.0	Santa Cruz Islands
+2013-02-07T18:59:16	6.7	mww	-11.00	165.66	11.0	Santa Cruz Islands
+2013-02-07T00:30:10	6.0	mww	-11.66	164.94	8.0	Santa Cruz Islands Region
+2013-02-06T11:53:55	6.0	mww	-11.24	165.73	14.0	Santa Cruz Islands
+2013-02-06T10:33:17	6.0	mwb	-10.64	164.76	10.0	Santa Cruz Islands Region
+2013-02-06T06:35:19	6.1	mwc	-10.79	164.55	10.0	Santa Cruz Islands Region
+2013-02-06T01:54:14	7.0	mww	-10.50	165.59	8.8	Santa Cruz Islands
+2013-02-06T01:23:19	7.1	mww	-11.18	164.88	10.0	Santa Cruz Islands Region
+2013-02-06T01:12:25	8.0	mww	-10.80	165.11	24.0	Santa Cruz Islands
+2013-02-06T00:07:22	6.0	mww	-10.86	165.25	11.0	Santa Cruz Islands
+2013-02-02T18:58:06	6.0	mwb	-10.89	165.28	6.0	Santa Cruz Islands
+2013-02-02T14:17:35	6.9	mww	42.77	143.09	107.0	Hokkaido, Japan Region
+2013-02-01T22:18:33	6.4	mww	-11.12	165.38	10.0	Santa Cruz Islands
+2013-02-01T22:16:34	6.3	mww	-10.90	165.38	10.0	Santa Cruz Islands
+2013-02-01T05:36:41	6.0	mww	-11.10	165.53	15.0	Santa Cruz Islands
+2013-01-31T03:33:43	6.1	mww	-10.64	166.37	9.0	Santa Cruz Islands
+2013-01-30T23:03:43	6.1	mww	-10.63	166.37	10.0	Santa Cruz Islands
+2013-01-30T20:15:43	6.8	mww	-28.09	-70.65	45.0	Central Chile
+2013-01-28T16:38:53	6.1	mww	42.60	79.71	15.0	Lake Issyk Kul Region
+2013-01-21T22:22:52	6.1	mww	4.93	95.91	12.0	Northern Sumatra, Indonesia
+2013-01-15T16:09:37	6.1	mww	-62.57	-161.43	10.0	Pacific Antarctic Ridge
+2013-01-05T08:58:19	7.5	mww	55.39	-134.65	10.0	Southeastern Alaska
+2012-12-21T22:28:08	6.7	mww	-14.34	167.29	200.7	Vanuatu Islands
+2012-12-17T09:16:30	6.1	mww	-0.65	123.81	44.2	Minahassa Peninsula, Sulawesi
+2012-12-15T19:30:02	6.1	mww	-4.63	153.02	52.0	New Ireland Region, P.N.G.
+2012-12-15T04:49:29	6.0	mww	52.29	174.01	26.0	Near Islands, Aleutian Islands
+2012-12-14T10:36:01	6.3	mww	31.09	-119.66	13.0	Off W Coast of Baja California
+2012-12-11T06:18:27	6.0	mww	0.53	126.23	30.0	Northern Molucca Sea
+2012-12-10T16:53:08	7.1	mww	-6.53	129.82	155.0	Banda Sea
+2012-12-07T18:19:06	6.3	mww	-38.43	176.07	163.0	North Island, New Zealand
+2012-12-07T08:31:14	6.2	mww	37.91	143.76	32.0	Off East Coast of Honshu, Japan
+2012-12-07T08:18:23	7.3	mww	37.89	143.95	31.0	Off East Coast of Honshu, Japan
+2012-12-02T00:54:22	6.1	mww	-16.98	167.65	32.0	Vanuatu Islands
+2012-11-19T09:44:34	6.0	mww	-5.71	151.60	13.0	New Britain Region, P.N.G.
+2012-11-16T18:12:39	6.5	mww	49.28	155.43	29.0	Kuril Islands
+2012-11-15T09:20:21	6.1	mww	18.35	-100.38	53.0	Guerrero, Mexico
+2012-11-14T19:02:06	6.1	mww	-29.12	-71.19	63.0	Near Coast of Central Chile
+2012-11-13T04:31:26	6.1	mww	-45.76	-77.05	9.0	Off Coast of Southern Chile
+2012-11-12T20:42:14	6.3	mww	57.79	-142.85	9.0	Gulf of Alaska
+2012-11-11T22:14:59	6.5	mww	14.13	-92.16	20.0	Near Coast of Chiapas, Mexico
+2012-11-11T01:12:38	6.8	mww	23.00	95.89	13.7	Myanmar
+2012-11-10T14:57:50	6.0	mww	-8.87	-75.07	129.0	Central Peru
+2012-11-08T02:01:50	6.1	mww	49.23	-128.48	13.7	Vancouver Island, Canada Region
+2012-11-07T16:35:46	7.4	mww	13.99	-91.89	24.0	Near Coast of Guatemala
+2012-11-02T18:17:32	6.1	mww	9.22	126.16	37.0	Mindanao, Philippines
+2012-10-30T02:49:02	6.2	mww	52.37	-131.90	9.0	Queen Charlotte Islands Region
+2012-10-28T18:54:20	6.3	mww	52.67	-132.60	9.0	Queen Charlotte Islands Region
+2012-10-28T03:04:08	7.8	mww	52.79	-132.10	14.0	Queen Charlotte Islands Region
+2012-10-24T00:45:32	6.5	mww	10.09	-85.30	17.0	Costa Rica
+2012-10-20T23:00:32	6.2	mww	-13.55	166.56	36.0	Vanuatu Islands
+2012-10-17T04:42:30	6.0	mww	4.23	124.52	326.0	Celebes Sea
+2012-10-12T00:31:28	6.6	mww	-4.89	134.03	13.0	Irian Jaya Region, Indonesia
+2012-10-09T12:32:09	6.6	mww	-60.33	153.70	10.0	West of Macquarie Island
+2012-10-08T11:43:31	6.1	mww	-4.47	129.13	10.0	Banda Sea
+2012-10-01T22:21:46	6.1	mww	39.81	143.10	15.0	Off East Coast of Honshu, Japan
+2012-09-30T16:31:35	7.3	mww	1.93	-76.36	170.0	Colombia
+2012-09-26T23:39:55	6.4	mww	51.59	-178.29	16.0	Andreanof Islands, Aleutian Islands
+2012-09-25T23:45:24	6.3	mww	24.67	-110.17	10.0	Baja California, Mexico
+2012-09-14T04:51:47	6.2	mww	-3.32	100.59	19.0	Southern Sumatra, Indonesia
+2012-09-08T10:51:44	6.1	mww	-3.18	135.11	21.0	Irian Jaya Region, Indonesia
+2012-09-05T14:42:07	7.6	mww	10.09	-85.31	35.0	Costa Rica
+2012-09-05T13:09:10	6.0	mww	-12.48	166.51	27.0	Santa Cruz Islands
+2012-09-03T18:23:05	6.1	mww	-10.71	113.93	14.0	South of Java, Indonesia
+2012-08-31T12:47:33	7.6	mww	10.81	126.64	28.0	Philippine Islands Region
+2012-08-30T13:43:25	6.8	mww	71.44	-10.61	14.0	Jan Mayen Island Region
+2012-08-27T04:37:19	7.3	mww	12.14	-88.59	28.0	Off Coast of Central America
+2012-08-26T15:05:37	6.6	mww	2.19	126.84	91.1	Northern Molucca Sea
+2012-08-19T22:41:49	6.2	mww	-4.77	144.57	73.0	Near N. Coast of New Guinea, PNG.
+2012-08-18T09:41:52	6.3	mww	-1.31	120.10	10.0	Sulawesi, Indonesia
+2012-08-14T02:59:38	7.7	mww	49.80	145.06	583.2	Sea of Okhotsk
+2012-08-12T10:47:06	6.2	mww	35.66	82.52	13.0	Xizang
+2012-08-11T12:34:35	6.2	mww	38.39	46.74	12.0	Armenia-Azerbaijan-Iran Border Reg.
+2012-08-11T12:23:18	6.4	mww	38.33	46.83	11.0	Armenia-Azerbaijan-Iran Border Reg.
+2012-08-10T18:37:43	6.2	mww	52.63	-167.42	13.0	Fox Islands, Aleutian Islands
+2012-08-02T09:56:41	6.1	mww	-4.65	153.28	46.0	New Ireland Region, P.N.G.
+2012-08-02T09:38:30	6.1	mww	-8.41	-74.26	144.6	Peru-Brazil Border Region
+2012-07-28T20:03:56	6.5	mww	-4.65	153.17	41.0	New Ireland Region, P.N.G.
+2012-07-26T05:33:33	6.7	mww	-17.59	66.39	20.0	Mauritius/Reunion Region
+2012-07-25T11:20:27	6.4	mww	-9.69	159.73	20.0	Solomon Islands
+2012-07-25T00:27:45	6.4	mww	2.71	96.05	22.0	Northern Sumatra, Indonesia
+2012-07-20T06:10:25	6.0	mww	49.41	155.91	19.0	Kuril Islands
+2012-07-08T11:33:02	6.0	mww	45.50	151.29	20.0	Kuril Islands
+2012-07-06T02:28:22	6.3	mww	-14.66	167.34	160.1	Vanuatu Islands
+2012-07-03T10:36:15	6.3	mww	-40.02	173.76	229.8	Cook Strait, New Zealand
+2012-06-29T21:07:33	6.3	mww	43.43	84.70	18.0	Northern Xinjiang, China
+2012-06-24T03:15:01	6.0	mww	57.60	163.19	10.0	Near East Coast of Kamchatka
+2012-06-23T04:34:53	6.1	mww	3.01	97.90	95.0	Northern Sumatra, Indonesia
+2012-06-19T15:56:32	6.0	mww	53.35	171.62	14.0	Near Islands, Aleutian Islands
+2012-06-17T20:32:20	6.3	mww	38.92	141.83	36.0	Near East Coast of Honshu, Japan
+2012-06-10T12:44:16	6.0	mww	36.42	28.88	35.0	Dodecanese Islands, Greece
+2012-06-07T16:03:18	6.1	mww	-15.88	-72.41	110.0	Southern Peru
+2012-06-07T04:05:04	6.0	mww	-36.07	-70.57	8.0	Chile-Argentina Border Region
+2012-06-05T19:31:33	6.1	mww	34.94	141.13	15.0	Off East Coast of Honshu, Japan
+2012-06-04T03:15:24	6.3	mww	5.51	-82.56	7.0	South of Panama
+2012-06-04T00:45:15	6.3	mww	5.30	-82.63	7.0	South of Panama
+2012-05-28T05:07:23	6.7	mww	-28.04	-63.09	586.9	Santiago Del Estero Prov., Argentina
+2012-05-26T21:48:10	6.0	mwc	26.91	140.06	487.4	Bonin Islands, Japan Region
+2012-05-24T22:47:46	6.1	mww	72.96	5.68	10.0	Norwegian Sea
+2012-05-23T22:59:52	6.0	mww	-50.42	139.52	10.0	Western Indian Antarctic Ridge
+2012-05-20T07:20:36	6.3	mww	39.65	143.16	11.0	Off East Coast of Honshu, Japan
+2012-05-20T02:03:52	6.0	mww	44.89	11.23	6.3	Northern Italy
+2012-05-18T02:00:39	6.3	mww	-44.81	-80.16	10.0	Off Coast of Southern Chile
+2012-05-14T10:00:40	6.2	mww	-17.68	-69.59	105.9	Peru-Bolivia Border Region
+2012-05-01T22:43:33	6.0	mww	14.38	-92.90	14.0	Near Coast of Chiapas, Mexico
+2012-04-28T10:08:08	6.6	mww	-18.68	-174.71	134.7	Tonga Islands
+2012-04-23T17:36:21	6.0	mww	-28.56	-177.41	114.0	Kermadec Islands Region
+2012-04-21T01:25:13	6.0	mwc	-1.64	134.20	17.4	Irian Jaya Region, Indonesia
+2012-04-21T01:16:52	6.7	mww	-1.62	134.28	16.0	Irian Jaya Region, Indonesia
+2012-04-17T19:03:56	6.2	mww	-59.02	-16.61	12.0	East of South Sandwich Islands
+2012-04-17T07:13:49	6.8	mww	-5.46	147.12	198.0	Eastern New Guinea Reg., P.N.G.
+2012-04-17T03:50:15	6.7	mww	-32.63	-71.36	29.0	Near Coast of Central Chile
+2012-04-15T05:57:40	6.2	mww	2.58	90.27	25.0	Off West Coast of Northern Sumatra
+2012-04-14T22:05:26	6.2	mww	-18.97	168.74	11.0	Vanuatu Islands
+2012-04-14T10:56:19	6.2	mww	-57.68	-65.31	15.0	Drake Passage
+2012-04-12T07:15:48	7.0	mww	28.70	-113.10	13.0	Baja California, Mexico
+2012-04-12T07:06:00	6.0	mwb	28.84	-113.03	9.0	Baja California, Mexico
+2012-04-11T22:55:10	6.5	mwb	18.23	-102.69	20.0	Michoacan, Mexico
+2012-04-11T22:41:46	6.0	mwc	43.58	-127.64	8.0	Off Coast of Oregon
+2012-04-11T10:43:10	8.2	mwc	0.80	92.46	25.1	Off West Coast of Northern Sumatra
+2012-04-11T09:27:56	6.0	mb	1.25	91.73	10.0	North Indian Ocean
+2012-04-11T08:38:36	8.6	mw	2.33	93.06	20.0	Off West Coast of Northern Sumatra
+2012-04-06T16:15:58	6.1	mww	-4.55	153.46	108.5	New Ireland Region, P.N.G.
+2012-04-02T17:36:42	6.0	mww	16.39	-98.32	9.0	Near Coast of Guerrero, Mexico
+2012-03-27T11:00:44	6.1	mwc	39.86	142.02	15.0	Near East Coast of Honshu, Japan
+2012-03-26T18:12:52	6.0	mwb	10.07	-104.16	10.0	Northern East Pacific Rise
+2012-03-25T22:37:06	7.1	mww	-35.20	-72.22	40.7	Near Coast of Central Chile
+2012-03-21T22:15:06	6.6	mww	-6.24	145.96	118.0	New Guinea, Papua New Guinea
+2012-03-20T18:02:47	7.4	mww	16.49	-98.23	20.0	Near Coast of Guerrero, Mexico
+2012-03-20T17:56:18	6.1	mww	-3.81	140.27	66.0	Irian Jaya, Indonesia
+2012-03-14T21:13:08	6.2	mww	-5.59	151.04	28.0	New Britain Region, P.N.G.
+2012-03-14T12:05:04	6.0	mwc	35.69	140.69	10.0	Near East Coast of Honshu, Japan
+2012-03-14T10:49:24	6.1	mwc	40.78	144.76	10.0	Off East Coast of Honshu, Japan
+2012-03-14T09:08:35	6.9	mww	40.89	144.94	12.0	Off East Coast of Honshu, Japan
+2012-03-09T07:09:50	6.7	mww	-19.13	169.61	16.0	Vanuatu Islands
+2012-03-05T07:46:10	6.1	mww	-28.25	-63.29	553.9	Santiago Del Estero Prov., Argentina
+2012-03-03T12:19:55	6.6	mww	-22.14	170.34	14.0	Southeast of Loyalty Islands
+2012-02-26T06:17:19	6.7	mww	51.71	95.99	12.0	Southwestern Siberia, Russia
+2012-02-26T05:21:24	6.0	mww	-24.50	-177.24	10.0	South of Fiji Islands
+2012-02-14T08:19:55	6.4	mww	-10.39	161.10	51.0	Solomon Islands
+2012-02-06T10:10:19	6.0	mww	9.88	123.09	9.0	Negros, Philippines
+2012-02-06T03:49:12	6.7	mww	10.00	123.21	11.0	Negros, Philippines
+2012-02-05T16:40:39	6.1	mww	-17.95	167.23	8.0	Vanuatu Islands
+2012-02-05T00:15:38	6.1	mww	-18.89	168.92	145.0	Vanuatu Islands
+2012-02-03T03:46:21	6.1	mww	-17.38	167.28	8.0	Vanuatu Islands
+2012-02-02T13:34:40	7.1	mww	-17.83	167.13	23.0	Vanuatu Islands
+2012-01-30T05:11:00	6.4	mww	-14.17	-75.64	43.0	Near Coast of Peru
+2012-01-24T00:52:05	6.3	mww	-24.98	178.52	580.3	South of Fiji Islands
+2012-01-23T16:04:52	6.1	mww	-36.41	-73.03	20.0	Near Coast of Central Chile
+2012-01-22T05:53:42	6.0	mww	-56.76	-25.15	13.0	South Sandwich Islands Region
+2012-01-21T18:47:11	6.2	mww	14.87	-93.00	45.0	Near Coast of Chiapas, Mexico
+2012-01-15T14:21:31	6.0	mwc	-60.88	-55.97	10.0	South Shetland Islands
+2012-01-15T13:40:19	6.6	mww	-60.95	-56.11	8.0	South Shetland Islands
+2012-01-10T18:36:59	7.2	mww	2.43	93.21	19.0	Off West Coast of Northern Sumatra
+2012-01-09T04:07:14	6.4	mww	-10.62	165.16	28.0	Santa Cruz Islands
+2012-01-01T05:27:55	6.8	mww	31.46	138.07	365.3	Southeast of Honshu, Japan
+2011-12-27T15:21:56	6.6	mww	51.84	95.91	15.0	Southwestern Siberia, Russia
+2011-12-26T04:48:08	6.0	mww	-16.20	-173.86	90.0	Tonga Islands
+2011-12-15T10:10:07	6.0	mww	-32.72	-179.10	32.0	South of Kermadec Islands
+2011-12-14T05:04:58	7.1	mww	-7.55	146.81	135.0	Eastern New Guinea Reg., P.N.G.
+2011-12-13T07:52:11	6.0	mww	0.04	123.03	161.0	Minahassa Peninsula, Sulawesi
+2011-12-11T09:54:55	6.2	mww	-56.01	-28.18	116.0	South Sandwich Islands Region
+2011-12-11T01:47:25	6.5	mww	17.99	-99.79	59.0	Guerrero, Mexico
+2011-12-07T22:23:09	6.1	mww	-27.90	-70.92	20.0	Near Coast of Northern Chile
+2011-11-30T00:27:06	6.0	mww	15.46	119.00	9.0	Philippine Islands Region
+2011-11-28T12:26:45	6.1	mww	-5.48	153.73	25.0	New Ireland Region, P.N.G.
+2011-11-24T10:25:34	6.2	mww	41.90	142.64	38.0	Hokkaido, Japan Region
+2011-11-23T19:24:31	6.1	mww	37.37	141.37	34.0	Near East Coast of Honshu, Japan
+2011-11-22T18:48:16	6.6	mww	-15.36	-65.09	549.9	Central Bolivia
+2011-11-17T01:57:05	6.0	mww	-1.70	-81.55	26.6	Off Coast of Ecuador
+2011-11-14T04:05:11	6.3	mww	-0.95	126.91	17.0	Southern Molucca Sea
+2011-11-11T10:41:37	6.0	mww	-55.98	-124.44	10.0	Southern East Pacific Rise
+2011-11-08T02:59:08	6.9	mww	27.32	125.62	224.9	Northeast of Taiwan
+2011-11-07T22:35:25	6.0	mww	11.56	-85.86	177.0	Nicaragua
+2011-11-02T14:59:27	6.1	mww	-55.29	-128.84	10.0	Pacific Antarctic Ridge
+2011-11-01T12:32:00	6.3	mww	19.83	-109.20	10.0	Revilla Gigedo Islands Region
+2011-10-28T18:54:34	6.9	mww	-14.44	-75.97	24.0	Near Coast of Peru
+2011-10-27T00:15:24	6.0	mww	-17.94	-179.53	602.9	Fiji Islands Region
+2011-10-23T10:41:23	7.1	mww	38.72	43.51	18.0	Turkey
+2011-10-21T17:57:16	7.4	mww	-28.99	-176.24	33.0	Kermadec Islands Region
+2011-10-21T08:02:37	6.1	mww	43.89	142.48	187.0	Hokkaido, Japan Region
+2011-10-18T05:05:06	6.1	mww	-5.79	151.04	26.0	New Britain Region, P.N.G.
+2011-10-14T06:10:14	6.0	mww	54.08	123.72	12.0	Southeastern Siberia, Russia
+2011-10-14T03:35:14	6.5	mww	-6.57	147.88	37.0	Eastern New Guinea Reg., P.N.G.
+2011-10-13T03:16:30	6.1	mww	-9.35	114.59	39.0	South of Bali, Indonesia
+2011-10-07T08:58:28	6.1	mww	-32.51	-179.04	36.0	South of Kermadec Islands
+2011-09-22T23:07:03	6.4	mww	-15.44	-175.31	10.0	Tonga Islands
+2011-09-18T12:40:51	6.9	mww	27.73	88.16	50.0	Sikkim, India
+2011-09-16T19:26:40	6.7	mwc	40.27	142.78	30.0	Near East Coast of Honshu, Japan
+2011-09-15T19:31:04	7.3	mww	-21.61	-179.53	644.6	Fiji Islands Region
+2011-09-15T08:00:09	6.1	mww	36.26	141.34	28.0	Near East Coast of Honshu, Japan
+2011-09-15T07:53:18	6.1	mww	-35.37	-179.04	10.0	East of North Island, N.Z.
+2011-09-14T18:10:09	6.0	mww	53.11	172.98	15.0	Near Islands, Aleutian Islands
+2011-09-09T19:41:34	6.4	mww	49.53	-126.89	22.0	Vancouver Island, Canada Region
+2011-09-05T17:55:11	6.7	mww	2.96	97.89	91.0	Northern Sumatra, Indonesia
+2011-09-05T09:52:01	6.2	mww	-15.29	-173.62	37.0	Tonga Islands
+2011-09-03T22:55:40	7.0	mww	-20.67	169.72	185.1	Vanuatu Islands
+2011-09-03T04:48:57	6.4	mww	-56.45	-26.85	84.0	South Sandwich Islands Region
+2011-09-02T13:47:09	6.7	mww	-28.40	-63.03	578.9	Santiago Del Estero Prov., Argentina
+2011-09-02T10:55:53	6.9	mww	52.17	-171.71	32.0	Fox Islands, Aleutian Islands

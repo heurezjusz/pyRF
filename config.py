@@ -97,6 +97,8 @@ SEARCH_FILTER_FREQ = { 'FREQMIN': 0.1, 'FREQMAX': 0.5 }
 # ---------------------------------------------------- #
 #              theoretical mode constants              #
 # ---------------------------------------------------- #
+# earth radius in meters
+EARTH_RADIUS = 6378137.0
 
 # ===== average velocity of S-waves in shell =====
 # velocity for station in format ('station ID': velocity in km/s)
@@ -108,24 +110,32 @@ import math
 VS_DEFAULT = 6. / math.sqrt(3)
 
 
-# ==== slowness and back-azimuth of event ====
-# pass the values manually:
+# ==== slowness and back-azimuth of the event ====
+#  It is possible to pass SLOWNESS and AZIMUTH constants manually
+#  (COLLECTDATA_MODE = "manual"), but it can be counted automatically
+#  from events and stations data (COLLECTDATA_MODE = "find")
 
+# --- passing the constants manually
 #COLLECTDATA_MODE = "manual"
 #SLOWNESS = 5.523560e+00 / 111.12
 #AZIMUTH = 4.339704e+01
 
-# count the values from station and event's data:
+# --- counting the values from station and event's data:
+COLLECTDATA_MODE = 'find'
 
-COLLECTDATA_MODE = "find"
-# file with coordinated of the stations in format (station ID, latitude, longitude)
-STATIONS_DATA = 'example/stations_data.csv'
-# file with events' data
-EVENTS_DATA = 'example/PDE_join.csv'
+# File with stations data.
+# program supports file format from * database
+# (see example/stationlist.txt)
+STATIONS_DATA = 'example/stationlist.txt'
 
-# earth radius in meters
-EARTH_RADIUS = 6378137.0
+# File with events data.
+# Program supports two most popular formats:
+# european (EVENTS_FORMAT = "EU", file: example/eventlist_eu.txt) and american
+#EVENTS_FORMAT = 'EU'
+#EVENTS_DATA = 'example/eventlist_eu.txt'
 
+EVENTS_FORMAT = 'US'
+EVENTS_DATA = 'example/eventlist_us.csv'
 
 # ==================================================== #
 #                    saving results                    #

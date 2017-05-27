@@ -29,7 +29,6 @@ def _levinson(toeplitz, signal):
 
     returns: 1D numpy.array with solution of equation T * x = b
     
-    
     Reimplementation of toeplitz.c file from Seismic Handler sources
     """
 
@@ -61,7 +60,6 @@ def _levinson(toeplitz, signal):
         a[ : i] = b[ : i]
 
     return f
-
 
 
 from scipy.signal import wiener
@@ -98,5 +96,5 @@ def _spikefil(trc, type="max", spike_pos=None):
     ac[0] *= 1. + reg
 
     ccr[:t0 + 1] = trc[:t0 + 1][::-1]
-    
+
     return _levinson(ac, ccr)

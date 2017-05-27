@@ -24,6 +24,12 @@ def collect_data(filename):
     if events_coordinates is None:
         events_coordinates = _load_events_coordinates(config.EVENTS_DATA)
 
+    if not event in events_coordinates:
+        raise KeyError('Event %s not found in file "%s"' % (event, config.EVENTS_DATA))
+
+    if not station in stations_coordinates:
+        raise KeyError('Station %s not found in file "%s"' % (station, config.STATIONS_DATA))
+
     ev_lat, ev_lon, ev_time, ev_depth = events_coordinates[event]
     stat_lat, stat_lon = stations_coordinates[station]
 
@@ -40,23 +46,48 @@ def collect_data(filename):
     return azimuth, slowness
 
 
-def _load_events_coordinates(filepath):
-    result = {}
-    with open(filepath, 'r') as f:
-        reader = csv.reader(f, delimiter="\t")
-        for row in reader:
-            label = row[1][-2:] + row[2] + row[3] + '_' + row[4][:-3]
-            result[label] = (float(row[5]), float(row[6]), UTCDateTime(row[1]+row[2]+row[3] + 'T' + row[4]), float(row[7]))
-    return result
-
-
 def _load_stations_coordinates(filepath):
     result = {}
     with open(filepath, 'r') as f:
         reader = csv.reader(f, delimiter="\t")
-        next(reader)
         for row in reader:
             if len(row): # Windows line ending creates empty rows
-                result[row[0]] = (float(row[1]), float(row[2]))
+                result[row[1]] = (float(row[2]), float(row[3]))
 
     return result
+
+
+def _load_events_coordinates(filepath):
+    if config.EVENTS_FORMAT == 'EU':
+        return _load_events_coordinates_EU(filepath)
+
+    elif config.EVENTS_FORMAT == 'US':
+        return _load_events_coordinates_US(filepath)
+
+    else:
+        raise NotImplementedError
+
+
+def _load_events_coordinates_US(filepath):
+    result = {}
+    with open(filepath, 'r') as f:
+        reader = csv.reader(f, delimiter=",")
+        next(reader)
+        for row in reader:
+            label = _datetime_to_label(row[0])
+            result[label] = (float(row[1]), float(row[2]), UTCDateTime(row[0]), float(row[3]))
+    return result
+
+
+def _load_events_coordinates_EU(filepath):
+    result = {}
+    with open(filepath, 'r') as f:
+        reader = csv.reader(f, delimiter="\t")
+        for row in reader:
+            label = _datetime_to_label(row[0])
+            result[label] = (float(row[3]), float(row[4]), UTCDateTime(row[0]), float(row[5]))
+    return result
+
+
+def _datetime_to_label(datetime):
+    return datetime[2 : 19].replace('-', '').replace('T', '_').replace(':', '')
