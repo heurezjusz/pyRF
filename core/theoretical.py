@@ -4,7 +4,7 @@ import config
 from core import calculate_rf, deconvolve, station_event, search_angles
 from external import collect_data
 
-def rotate_theoretical(data, filename, cmp_outfile):
+def rotate_theoretical(data, filename, cmp_outfile, use_angles='theoretical'):
     if config.VERBOSITY >= 2:
         print("rotate: counting theoretical azimuth and inlcination")
     
@@ -18,6 +18,9 @@ def rotate_theoretical(data, filename, cmp_outfile):
         cmp_outfile.write(event + "\t")
         cmp_outfile.write("search" + "\t" + str(az_s) + "\t" + str(in_s) + "\t")
         cmp_outfile.write("theory" + "\t" + str(azimuth) + "\t" + str(inci) + "\n")
+
+        if use_angles == 'search':
+            azimuth, inci = az_s, in_s
 
     data.rotate('ZNE->LQT', azimuth, inci)
     return data

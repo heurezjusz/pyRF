@@ -14,10 +14,10 @@ def rotate_search(data):
 
 
 def search_angles(data):
-    if config.VERBOSITY >= 2:
-        print("looking for azimuth")
 
     # looking for azimuth
+    if config.VERBOSITY >= 2:
+        print("looking for azimuth")
     amin = config.AZIMUTH_ANGLES['min']
     amax = config.AZIMUTH_ANGLES['max']
     astep = config.AZIMUTH_ANGLES['step']
@@ -25,6 +25,8 @@ def search_angles(data):
                                         for a in range(int(amin / astep), int(amax / astep) + 1)])
 
     # looking for inclination
+    if config.VERBOSITY >= 2:
+        print("looking for inclination")
     imin = config.INCLINATION_ANGLES['min']
     imax = config.INCLINATION_ANGLES['max']
     istep = config.INCLINATION_ANGLES['step']
@@ -45,7 +47,7 @@ def search_angles(data):
 
 
 def _sum_of_amplitudes(data, azimuth):
-    if config.VERBOSITY >= 3:
+    if config.VERBOSITY >= 2:
         print("analyzing data for azimuth=%f" % (azimuth))
     data.rotate('ZNE->LQT', azimuth, 0)
 
@@ -57,7 +59,7 @@ def _sum_of_amplitudes(data, azimuth):
 
 
 def _rms(data, azimuth, inclination):
-    if config.VERBOSITY >= 3:
+    if config.VERBOSITY >= 2:
         print("analyzing data for inclination=%f" % inclination)
     data.rotate('ZNE->LQT', azimuth, inclination)
 

@@ -36,9 +36,8 @@ if config.ERROR_DETAILS:
     ERR = open('out/err_details_%s.txt' % date, 'w')
 
 for filename in os.listdir(path):
-    if config.VERBOSITY >= 1:
-        print ( filename )
     station, event = station_event(filename)
+    print ( filename + " station: %s, event: %s" % (station,  event))
     if LOGS:
         LOGS.write(filename + '\t' + station + '\t' + event + '\t')
 
@@ -56,9 +55,12 @@ for filename in os.listdir(path):
         if config.MODE == "theoretical":
             data = rotate_theoretical(data, filename, ANGLES)
         elif config.MODE == "search":
-            data = rotate_search(data)
+            if config.COMPARE_ANGLES:
+                data = rotate_theoretical(data, filename, ANGLES, use_angles='search')
+            else:
+                data = rotate_search(data)
         else:
-            raise NotImplementedError
+            raise NotImplementedError('MODE should be set on "search" or "theoretical"')
 
         if config.SAVE_ROTATED:
             data.write(output_filename(filename, prefix='rotated_'), config.SAVE_FORMAT)
@@ -75,9 +77,11 @@ for filename in os.listdir(path):
 
         if LOGS:
             LOGS.write('OK\n')
+        print('\033[32mOK\033[39m')
     except:
         if LOGS:
             LOGS.write('ERROR\n')
+        print('\033[31mERROR\033[39m')
         if ERR:
             ERR.write(filename + '\t' + station + '\t' + event + '\n')
             ERR.write(traceback.format_exc())

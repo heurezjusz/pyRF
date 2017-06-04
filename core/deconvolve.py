@@ -7,7 +7,7 @@ def deconvolve(signals, function):
     """returns list of deconvolutions of given signals
     using Toeplitz matrix method"""
 
-    if config.VERBOSITY >= 1:
+    if config.VERBOSITY >= 3:
         print("deconvotution")
 
     if config.VERBOSITY >= 4:
