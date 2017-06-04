@@ -8,6 +8,12 @@ from obspy.core.stream import Stream
 
 
 def rotate_search(data):
+    azimuth, inclination = search_angles(data)
+    data.rotate('ZNE->LQT', azimuth, inclination)
+    return data
+
+
+def search_angles(data):
     if config.VERBOSITY >= 2:
         print("looking for azimuth")
 
@@ -35,8 +41,7 @@ def rotate_search(data):
     if config.VERBOSITY >= 1:
         print("azimuth angle: %f inclination angle: %f" % (azimuth, inclination))
 
-    data.rotate('ZNE->LQT', azimuth, inclination)
-    return data
+    return azimuth, inclination
 
 
 def _sum_of_amplitudes(data, azimuth):

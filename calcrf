@@ -1,56 +1,89 @@
 #!/usr/bin/python3
 
-import config
+import sys
+import traceback
+import datetime
 import os
+import config
+
+from core import output_filename, rotate_theoretical, rotate_search, calculate_rf, cut, station_event
+from external import collect_data
+from obspy import read
 
 # parsing arguments
-import argparse
-parser = argparse.ArgumentParser()
+#import argparse
+#parser = argparse.ArgumentParser()
 
-parser.add_argument('data_catalog', type=str,
-        help='name of a catalog with data')
+#parser.add_argument('data_catalog', type=str,
+        #help='name of a catalog with data')
 
-args = parser.parse_args()
+#args = parser.parse_args()
 
+#path = vars(args)['data_catalog']
+path = config.DATAFOLDER
 
-def stop():
-    return 1 / 0
+date = str(datetime.datetime.now())[:19].replace(' ', '_')
 
-# program itself
-from core import output_filename, rotate_theoretical, rotate_search, calculate_rf, cut
-from external import collect_data
+ANGLES = None
+LOGS = None
+ERR = None
 
-
-from obspy import read
-path = vars(args)['data_catalog']
+if config.COMPARE_ANGLES:
+    ANGLES = open('out/angles_%s.txt' % date, 'w')
+if config.LOGS:
+    LOGS = open('out/logs_%s.txt' % date, 'w')
+if config.ERROR_DETAILS:
+    ERR = open('out/err_details_%s.txt' % date, 'w')
 
 for filename in os.listdir(path):
     if config.VERBOSITY >= 1:
         print ( filename )
+    station, event = station_event(filename)
+    if LOGS:
+        LOGS.write(filename + '\t' + station + '\t' + event + '\t')
 
-    # reading file
-    data = read(path + '/' + filename)
-    if config.PLOT_DATA_FROM_FILE: data.plot()
+    try:
+        data = read(path + '/' + filename)
+        if config.PLOT_DATA_FROM_FILE: data.plot()
+        
+        data = cut(data)
+        if config.SAVE_CUT:
+            data.write(output_filename(filename, prefix='cut_'), config.SAVE_FORMAT)
+        if config.PLOT_CUT: data.plot()
+        if config.PLOT_FILE_CUT:
+            data.plot(outfile=output_filename(filename, prefix='plot_cut_', extension='png'))
+
+        if config.MODE == "theoretical":
+            data = rotate_theoretical(data, filename, ANGLES)
+        elif config.MODE == "search":
+            data = rotate_search(data)
+        else:
+            raise NotImplementedError
+
+        if config.SAVE_ROTATED:
+            data.write(output_filename(filename, prefix='rotated_'), config.SAVE_FORMAT)
+        if config.PLOT_ROTATED: data.plot()
+
+        data = calculate_rf(data, zero_shift=config.RF_SHIFT)
+
+        if config.SAVE_RF:
+            data.write(output_filename(filename, prefix='rf_'), config.SAVE_FORMAT)
+        if config.PLOT_RF:
+            data.plot()
+        if config.PLOT_FILE_RF:
+            data.plot(outfile=output_filename(filename, prefix='plot_rf_', extension='png'))
+
+        if LOGS:
+            LOGS.write('OK\n')
+    except:
+        if LOGS:
+            LOGS.write('ERROR\n')
+        if ERR:
+            ERR.write(filename + '\t' + station + '\t' + event + '\n')
+            ERR.write(traceback.format_exc())
+            ERR.write('\n')
+            ERR.flush()
+        print(traceback.format_exc())
     
-    data = cut(data)
-    if config.SAVE_CUT:
-        data.write(output_filename(filename, prefix='cut_'), config.SAVE_FORMAT)
-    if config.PLOT_CUT: data.plot()
-
-    if config.MODE == "theoretical":
-        data = rotate_theoretical(data, filename)
-    elif config.MODE == "search":
-        data = rotate_search(data)
-    else:
-        raise NotImplementedError
-
-    if config.SAVE_ROTATED:
-        data.write(output_filename(filename, prefix='rotated_'), config.SAVE_FORMAT)
-    if config.PLOT_ROTATED: data.plot()
-
-    data = calculate_rf(data, zero_shift=config.RF_SHIFT)
-
-    if config.SAVE_RF:
-        data.write(output_filename(filename, prefix='rf_'), config.SAVE_FORMAT)
-    if config.PLOT_RF:
-        data.plot()
+    if LOGS:
+        LOGS.flush()

@@ -5,8 +5,8 @@ import ntpath
 from os.path import splitext
 
 
-def output_filename(path, prefix=''):
-    return 'out/' + prefix + _extract_filemane(path) + '.' + config.SAVE_FORMAT
+def output_filename(path, prefix='', extension=config.SAVE_FORMAT):
+    return 'out/' + prefix + _extract_filemane(path) + '.' + extension
 
 
 def station_event(path):

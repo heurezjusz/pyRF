@@ -1,15 +1,24 @@
 # theoretical mode main functions
 
 import config
-from core import calculate_rf, deconvolve, station_event
+from core import calculate_rf, deconvolve, station_event, search_angles
 from external import collect_data
 
-def rotate_theoretical(data, filename):
+def rotate_theoretical(data, filename, cmp_outfile):
     if config.VERBOSITY >= 2:
         print("rotate: counting theoretical azimuth and inlcination")
     
     azimuth, slowness, V_S = _collect_data(filename)
     inci = _theoretical_inclination(slowness, V_S)
+    
+    if config.COMPARE_ANGLES:
+        az_s, in_s = search_angles(data)
+        station, event = station_event(filename)
+        cmp_outfile.write(station + "\t")
+        cmp_outfile.write(event + "\t")
+        cmp_outfile.write("search" + "\t" + str(az_s) + "\t" + str(in_s) + "\t")
+        cmp_outfile.write("theory" + "\t" + str(azimuth) + "\t" + str(inci) + "\n")
+
     data.rotate('ZNE->LQT', azimuth, inci)
     return data
 

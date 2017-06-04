@@ -1,3 +1,24 @@
+# verbosity level - level of details printed by program
+VERBOSITY = 1
+
+#DATAFOLDER = 'example/data'
+#DATAFOLDER = '/home/heurezjusz/fizyka/do_obrobki/DATA_MSI'
+DATAFOLDER = '/home/heurezjusz/fizyka/do_obrobki/proba'
+
+
+# create file with logs - for every datafile
+#   prints recognized event, station code and OK or ERROR
+#   in case of error during computations.
+#   After an error datafile is skipped.
+# filename: out/logs_[date].txt
+LOGS = True
+
+# create file with error details - in case of error
+#   prints datafile, recognized station end event and full traceback
+#   for every error during computations. After an error datafile is skipped.
+# filename: out/err_details_[date].txt
+ERROR_DETAILS = True
+
 # ==================================================== #
 #                  receiver function                   #
 # ==================================================== #
@@ -20,7 +41,7 @@ REVERSE_TRF = False
 #  "seconds" - use data between START_SECOND and END_SECOND (float).
 #              Seconds are counted from begginig of the file.
 
-CUT_MODE = "none"
+#CUT_MODE = "none"
 
 #CUT_MODE = "dates"
 #START_DATE = "2007-07-16T01:25:17.9"
@@ -30,15 +51,15 @@ CUT_MODE = "none"
 #START_DATE = "2007-07-16T01:25:17.9"
 #WINDOW_LEN = 105.
 
-#CUT_MODE = "seconds"
-#START_SECOND = 195.
-#END_SECOND = 300.
+CUT_MODE = "seconds"
+START_SECOND = 10 * 60 - 5
+END_SECOND = 10 * 60 + 195
 
 # ==== RESULT time window ====
 # Result time frame measured from time 0.
 # obtained receival function will be cutted to time frame below (in seconds, float):
-RF_TIME_FROM = -5.
-RF_TIME_TO = 200.
+RF_TIME_FROM = -10.
+RF_TIME_TO = 30.
 
 
 # =================== time 0 output format ======================
@@ -74,9 +95,6 @@ FILTER_FREQ = { 'FREQMIN': 0.03, 'FREQMAX': 0.8 }
 MODE = "theoretical"
 #MODE = "search"
 
-# verbosity level - level of details printed by program
-VERBOSITY = 3
-
 
 # ---------------------------------------------------- #
 #                   search mode options                #
@@ -86,7 +104,7 @@ VERBOSITY = 3
 # grid search algorithm will iterate through angles between
 # 'min' and 'max' with given 'step'
 AZIMUTH_ANGLES = { 'min': 0., 'max': 359, 'step': 1 }
-INCLINATION_ANGLES = { 'min': 0., 'max': 45., 'step': 0.5 } 
+INCLINATION_ANGLES = { 'min': 0., 'max': 45., 'step': 0.5 }
 
 # =================== filtering ======================
 # parameters FREQMIN and FREQMAX for ObsPy 'boundpass' filter
@@ -126,16 +144,23 @@ COLLECTDATA_MODE = 'find'
 # File with stations data.
 # program supports file format from * database
 # (see example/stationlist.txt)
-STATIONS_DATA = 'example/stationlist.txt'
+#STATIONS_DATA = 'example/stationlist.txt'
+STATIONS_DATA = '/home/heurezjusz/fizyka/do_obrobki/stationlist.txt'
 
 # File with events data.
 # Program supports two most popular formats:
 # european (EVENTS_FORMAT = "EU", file: example/eventlist_eu.txt) and american
-EVENTS_FORMAT = 'EU'
-EVENTS_DATA = 'example/eventlist_eu.txt'
+#EVENTS_FORMAT = 'EU'
+#EVENTS_DATA = 'example/eventlist_eu.txt'
 
-#EVENTS_FORMAT = 'US'
+EVENTS_FORMAT = 'US'
 #EVENTS_DATA = 'example/eventlist_us.csv'
+EVENTS_DATA = '/home/heurezjusz/fizyka/do_obrobki/query_corrected.csv'
+
+
+
+COMPARE_ANGLES = False
+
 
 # ==================================================== #
 #                    saving results                    #
@@ -147,7 +172,7 @@ SAVE_CUT = False
 # save data after rotation, filename: rotated_[filename]
 SAVE_ROTATED = False
 # save calculated receive function, filename: rf_[filename]
-SAVE_RF = True
+SAVE_RF = False
 
 
 # ==================================================== #
@@ -156,8 +181,12 @@ SAVE_RF = True
 # plots data from readed file
 PLOT_DATA_FROM_FILE = False
 # plot data after cutting, filename: cut_[filename]
-PLOT_CUT = False
+PLOT_CUT = True
 # plots data after rotation
 PLOT_ROTATED = False
 # plots calculated receive function
 PLOT_RF = True
+
+
+PLOT_FILE_CUT = True
+PLOT_FILE_RF = True
