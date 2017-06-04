@@ -1,9 +1,9 @@
 # verbosity level - level of details printed by program
 VERBOSITY = 0
 
-#DATAFOLDER = 'example/data'
+DATAFOLDER = 'example/data'
 #DATAFOLDER = '/home/heurezjusz/fizyka/do_obrobki/DATA_MSI'
-DATAFOLDER = '/home/heurezjusz/fizyka/do_obrobki/proba'
+#DATAFOLDER = '/home/heurezjusz/fizyka/do_obrobki/proba'
 
 
 # create file with logs - for every datafile
@@ -144,8 +144,8 @@ COLLECTDATA_MODE = 'find'
 # File with stations data.
 # program supports file format from * database
 # (see example/stationlist.txt)
-#STATIONS_DATA = 'example/stationlist.txt'
-STATIONS_DATA = '/home/heurezjusz/fizyka/do_obrobki/stationlist.txt'
+STATIONS_DATA = 'example/stationlist.txt'
+#STATIONS_DATA = '/home/heurezjusz/fizyka/do_obrobki/stationlist.txt'
 
 # File with events data.
 # Program supports two most popular formats:
@@ -154,8 +154,8 @@ STATIONS_DATA = '/home/heurezjusz/fizyka/do_obrobki/stationlist.txt'
 #EVENTS_DATA = 'example/eventlist_eu.txt'
 
 EVENTS_FORMAT = 'US'
-#EVENTS_DATA = 'example/eventlist_us.csv'
-EVENTS_DATA = '/home/heurezjusz/fizyka/do_obrobki/query_corrected.csv'
+EVENTS_DATA = 'example/eventlist_us.csv'
+#EVENTS_DATA = '/home/heurezjusz/fizyka/do_obrobki/query_corrected.csv'
 
 
 
