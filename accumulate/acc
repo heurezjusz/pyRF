@@ -1,0 +1,86 @@
+#!/usr/bin/python3
+
+# ./acc -h for help
+# calculates median or average from all data from [datafolder]
+# datafiles has to contain two traces of receiver function
+# ans have to have the same time span
+
+import os
+import argparse
+import numpy as np
+from obspy import read
+from obspy.core.stream import Stream
+
+parser = argparse.ArgumentParser()
+parser.add_argument('data_folder', type=str,
+        help='name of a folder with receiver function datafiles')
+
+parser.add_argument('-o', '--outfile', type=str,
+                    help='name of file where output will be stored. Default: "out.sac"',
+                    default='out.sac')
+
+parser.add_argument('-m', '--median', dest='accumulate', action='store_const',
+                    const=np.median, default=np.average,
+                    help='count the median of the datafiles (default: count the average)')
+
+parser.add_argument('-p', '--plot', dest='plot', action='store_const',
+                    const=True, default=False,
+                    help='Plot the result')
+
+parser.add_argument('-v', '--verbosity', dest='verbosity', action='store_const',
+                    const=True, default=False,
+                    help='Print files')
+
+parser.add_argument('--pout', dest='plot_filename', type=str,
+                    default=None,
+                    help='name of file where plot will be stored. By default plot is not saved. --pout do not require -p option')
+
+args = parser.parse_args()
+path = args.data_folder
+
+#print ( args )
+
+QRF = []
+#TRF = []
+QT = None
+#TT = None
+
+import subprocess
+
+station = 'BEL'
+
+for filename in os.listdir(path):
+    s = read(path + '/' + filename)
+    
+    if args.verbosity:
+        print ( filename + '\t' + str(s) )
+    if len(s.traces[0].data) == 4001:
+        print ( '\033[31m'+ filename + '\t' + str(s)+'\033[39m' )
+        subprocess.call(['mv', '../out/%s/data/TRF/%s' % (station, filename), '../out/%s/data/rf' % station])
+    QRF.append(s.traces[0].data)
+    #TRF.append(s.traces[1].data)
+    if QT is None:
+        QT = s.traces[0]
+        #TT = s.traces[1].data
+
+if QT is None:# or TT is None:
+    raise AssertionError('"%s" folder is empty' % path)
+
+
+data = np.asarray(QRF)
+print ( data.shape )
+qtrace = args.accumulate(data, axis=0)
+#ttrace = args.accumulate(np.asarray(TRF), axis=0)
+QT.data = qtrace
+#TT.data = ttrace
+print (QT)
+
+result = Stream(traces=[QT])#, TT])
+
+if args.plot:
+    result.plot()
+
+if args.plot_filename:
+    result.plot(outfile=args.plot_filename)
+
+#result.write(output
