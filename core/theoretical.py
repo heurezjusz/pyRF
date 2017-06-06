@@ -18,6 +18,7 @@ def rotate_theoretical(data, filename, cmp_outfile, use_angles='theoretical'):
         cmp_outfile.write(event + "\t")
         cmp_outfile.write("search" + "\t" + str(az_s) + "\t" + str(in_s) + "\t")
         cmp_outfile.write("theory" + "\t" + str(azimuth) + "\t" + str(inci) + "\n")
+        cmp_outfile.flush()
 
         if use_angles == 'search':
             azimuth, inci = az_s, in_s
