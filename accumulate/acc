@@ -8,6 +8,7 @@
 import os
 import argparse
 import numpy as np
+import copy
 from obspy import read
 from obspy.core.stream import Stream
 
@@ -15,7 +16,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('data_folder', type=str,
         help='name of a folder with receiver function datafiles')
 
-parser.add_argument('-o', '--outfile', type=str,
+parser.add_argument('-o', '--outfile', dest='outfile', type=str,
                     help='name of file where output will be stored. Default: "out.sac"',
                     default='out.sac')
 
@@ -35,52 +36,93 @@ parser.add_argument('--pout', dest='plot_filename', type=str,
                     default=None,
                     help='name of file where plot will be stored. By default plot is not saved. --pout do not require -p option')
 
+parser.add_argument('-s', dest='starttime', type=float,
+                    default=0,
+                    help='Time in seconds at the begging of the output file (default: 0). Float, might be negative.')
+
+parser.add_argument('-t', '--traces', dest='traces', type=int,
+                    default=0,
+                    help='Used in case when traces are saved in several files.'
+                    'Number of traces to read at once. Files should be named'
+                    '"name01.ext", "name02.ext"... where [name] is filename and'
+                    '[ext] is extension. Maximum value is 99')
+
+
 args = parser.parse_args()
 path = args.data_folder
 
-#print ( args )
-
-QRF = []
-#TRF = []
-QT = None
-#TT = None
+n = args.traces
+traces = [[] for i in range(n)]
+empty_trace = None
 
 import subprocess
 
-station = 'BEL'
+def append_trace(num, filename):
+    if args.verbosity:
+        print ( num, filename )
+    global traces
+    s = read(path + '/' + filename)
+    traces[num].append(s[0].data)
+
+def get_noext_ext(filename):
+    assert '.' in filename
+    i = len(filename) - 1
+    while filename[i] != '.':
+        i -= 1
+    return filename[: i], filename[i :]
 
 for filename in os.listdir(path):
-    s = read(path + '/' + filename)
-    
-    if args.verbosity:
-        print ( filename + '\t' + str(s) )
-    if len(s.traces[0].data) == 4001:
-        print ( '\033[31m'+ filename + '\t' + str(s)+'\033[39m' )
-        subprocess.call(['mv', '../out/%s/data/TRF/%s' % (station, filename), '../out/%s/data/rf' % station])
-    QRF.append(s.traces[0].data)
-    #TRF.append(s.traces[1].data)
-    if QT is None:
-        QT = s.traces[0]
-        #TT = s.traces[1].data
+    if args.traces:
+        base, ext = get_noext_ext(filename)
+        if base[-2:] == '01':
+            for i in range(n):
+                x = '0' + str(i + 1) if i < 9 else str(i)
+                fname = base[: -2] + x + ext
+                append_trace(i, fname)
+    else:
+        s = read(path + '/' + filename)
+        if n == 0:
+            n = len(s.traces)
+        traces = [[] for i in range(n)]
+        for i in range(len(s.traces)):
+            traces[i].append[s[i]].data
 
-if QT is None:# or TT is None:
-    raise AssertionError('"%s" folder is empty' % path)
+    if empty_trace is None:
+        s = read(path + '/' + filename)
+        empty_trace = s[0]
+
+if empty_trace is None:
+    raise AssertionError('%s is an empty folder' % args.path)
 
 
-data = np.asarray(QRF)
-print ( data.shape )
-qtrace = args.accumulate(data, axis=0)
-#ttrace = args.accumulate(np.asarray(TRF), axis=0)
-QT.data = qtrace
-#TT.data = ttrace
-print (QT)
+data = np.asarray(traces)
+if args.verbosity:
+    print ( data.shape )
+    print ( data )
 
-result = Stream(traces=[QT])#, TT])
+avgtraces = args.accumulate(data, axis=1)    
+if args.verbosity:
+    print ( avgtraces.shape )
+    print ( avgtraces )
+
+out_traces = []
+dist = 0
+for d in avgtraces[::-1]:
+    tr = copy.deepcopy(empty_trace)
+    tr.data = d
+    tr.stats.starttime = args.starttime
+    tr.stats.distance = dist
+    dist += 1
+    out_traces.append(tr)
+
+
+result = Stream(traces=out_traces)
 
 if args.plot:
-    result.plot()
+    result.plot(type='section', norm_method='stream', alpha=1, orientation='horizontal')
 
 if args.plot_filename:
-    result.plot(outfile=args.plot_filename)
+    result.plot(outfile=args.plot_filename, type='section', norm_method='stream', alpha=1, orientation='horizontal')
 
-#result.write(output
+_, outext = get_noext_ext(args.outfile)
+result.write(args.outfile, format=outext[1:])
