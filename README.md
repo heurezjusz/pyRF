@@ -2,9 +2,9 @@
 Program to calculate receiver function from seismology data 
 
 Usage:
-./calcrf
+`./calcrf`
 or
-./calcrf DATAFOLDER
+`./calcrf DATAFOLDER`
 
 In first case DATAFOLDER should be defined in config.py
 
