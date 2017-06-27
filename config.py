@@ -1,9 +1,7 @@
 # verbosity level - level of details printed by program
 VERBOSITY = 0
 
-#DATAFOLDER = 'example/data'
-DATAFOLDER = '/home/heurezjusz/fizyka/do_obrobki/DATA_MSI'
-#DATAFOLDER = '/home/heurezjusz/fizyka/do_obrobki/proba'
+DATAFOLDER = 'example/data'
 
 
 # create file with logs - for every datafile
@@ -41,7 +39,7 @@ REVERSE_TRF = False
 #  "seconds" - use data between START_SECOND and END_SECOND (float).
 #              Seconds are counted from begginig of the file.
 
-#CUT_MODE = "none"
+CUT_MODE = "none"
 
 #CUT_MODE = "dates"
 #START_DATE = "2007-07-16T01:25:17.9"
@@ -51,9 +49,9 @@ REVERSE_TRF = False
 #START_DATE = "2007-07-16T01:25:17.9"
 #WINDOW_LEN = 105.
 
-CUT_MODE = "seconds"
-START_SECOND = 10 * 60 - 5
-END_SECOND = 10 * 60 + 195
+#CUT_MODE = "seconds"
+#START_SECOND = 10 * 60 - 5
+#END_SECOND = 10 * 60 + 195
 
 # ==== RESULT time window ====
 # Result time frame measured from time 0.
@@ -64,7 +62,7 @@ RF_TIME_TO = 30.
 
 # =================== time 0 output format ======================
 # set time 0 as 0s (obspy interpretes 0s as 00:00 of 01.01.1970)
-#TIME0_FORMAT = "zero"
+TIME0_FORMAT = "zero"
 
 # set time 0 as given date.
 # Date should be provided in "RRRR-MM-DDThh:mm:ss.(miliseconds) format (example below)
@@ -73,8 +71,8 @@ RF_TIME_TO = 30.
 
 # set time 0 TIME0_S (float) seconds after beginning of time window
 #     (see 'time window' section above)
-TIME0_FORMAT = "relative"
-TIME0_S = 0.
+#TIME0_FORMAT = "relative"
+#TIME0_S = 0.
 
 
 # time 0 will be set RF_SHIFT seconds after the theoretical time 0 (maximum in deconvolved L trace)
@@ -144,8 +142,7 @@ COLLECTDATA_MODE = 'find'
 # File with stations data.
 # program supports file format from * database
 # (see example/stationlist.txt)
-#STATIONS_DATA = 'example/stationlist.txt'
-STATIONS_DATA = '/home/heurezjusz/fizyka/do_obrobki/stationlist.txt'
+STATIONS_DATA = 'example/stationlist.txt'
 
 # File with events data.
 # Program supports two most popular formats:
@@ -154,13 +151,16 @@ STATIONS_DATA = '/home/heurezjusz/fizyka/do_obrobki/stationlist.txt'
 #EVENTS_DATA = 'example/eventlist_eu.txt'
 
 EVENTS_FORMAT = 'US'
-#EVENTS_DATA = 'example/eventlist_us.csv'
-EVENTS_DATA = '/home/heurezjusz/fizyka/do_obrobki/query_corrected.csv'
+EVENTS_DATA = 'example/eventlist_us.csv'
 
 
-
-COMPARE_ANGLES = True
-
+# ==================================================== #
+#                    saving results                    #
+# ==================================================== #
+# Azimuth and inclination angles will be calculated in both,
+# theoretical and search ways. Results will be stored in out/angles_[date].txt
+# To calculate final receival function will be used angles chosen by 'MODE' method.
+COMPARE_ANGLES = False
 
 # ==================================================== #
 #                    saving results                    #
@@ -168,7 +168,7 @@ COMPARE_ANGLES = True
 # format of data to be saved (in ObsPy convention)
 SAVE_FORMAT = "SAC"
 # save data after cutting, filename: cut_[filename]
-SAVE_CUT = True
+SAVE_CUT = False
 # save data after rotation, filename: rotated_[filename]
 SAVE_ROTATED = True
 # save calculated receive function, filename: rf_[filename]
@@ -185,7 +185,7 @@ PLOT_CUT = False
 # plots data after rotation
 PLOT_ROTATED = False
 # plots calculated receive function
-PLOT_RF = False
+PLOT_RF = True
 
 
 PLOT_FILE_CUT = True

@@ -73,7 +73,10 @@ def calculate_rf(data, filter_config = config.FILTER_FREQ, time_from = config.RF
     stT.traces[0].stats.channel = 'RFT'
 
     data = Stream(stQ.traces + stT.traces)
-    
+
+    # filtering 
+    data = data.filter('bandpass', freqmin=filter_config['FREQMIN'], freqmax=filter_config['FREQMAX'])
+
     # normalization
     if config.NORMALIZE_AFTER:
         mx = max([np.max(t.data) for t in data.traces])

@@ -2,8 +2,7 @@
 
 # ./acc -h for help
 # calculates median or average from all data from [datafolder]
-# datafiles has to contain two traces of receiver function
-# ans have to have the same time span
+# datafiles have to have the same time span
 
 import os
 import argparse
@@ -55,13 +54,13 @@ n = args.traces
 traces = [[] for i in range(n)]
 empty_trace = None
 
-import subprocess
 
 def append_trace(num, filename):
     if args.verbosity:
         print ( num, filename )
     global traces
     s = read(path + '/' + filename)
+    s = s.filter('bandpass', freqmin=0.03, freqmax=0.8)
     traces[num].append(s[0].data)
 
 def get_noext_ext(filename):
@@ -70,6 +69,7 @@ def get_noext_ext(filename):
     while filename[i] != '.':
         i -= 1
     return filename[: i], filename[i :]
+
 
 for filename in os.listdir(path):
     if args.traces:
@@ -83,16 +83,17 @@ for filename in os.listdir(path):
         s = read(path + '/' + filename)
         if n == 0:
             n = len(s.traces)
-        traces = [[] for i in range(n)]
+            print (n)
+            traces = [[] for i in range(n)]
         for i in range(len(s.traces)):
-            traces[i].append[s[i]].data
+            traces[i].append(s[i].data)
 
     if empty_trace is None:
         s = read(path + '/' + filename)
         empty_trace = s[0]
 
 if empty_trace is None:
-    raise AssertionError('%s is an empty folder' % args.path)
+    raise AssertionError('%s is an empty folder' % path)
 
 
 data = np.asarray(traces)
